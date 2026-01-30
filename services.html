@@ -6,8 +6,8 @@
   <title>Services | SBG Builders</title>
   <meta name="description" content="Commercial construction services by SBG Builders. Preconstruction, general contracting, tenant improvements, design-build coordination, and construction management." />
 
-  <link rel="icon" href="assets/img/logo.avif" type="image/avif" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="./assets/img/logo.avif" type="image/avif" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <meta property="og:title" content="Services | SBG Builders" />
   <meta property="og:description" content="Commercial construction services built for predictability, schedule control, and clean closeouts." />
@@ -17,72 +17,61 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Header / Nav -->
-  <header class="site-header" role="banner">
+  <!-- Fixed Navigation -->
+  <nav class="nav" role="banner">
     <div class="container">
-      <div class="nav-wrap">
-        <a class="brand" href="index.html" aria-label="SBG Builders home">
-          <img
-            class="brand-logo"
-            src="assets/img/logo.avif"
-            alt="SBG Builders logo"
-            width="36"
-            height="36"
-            loading="eager"
-            decoding="async"
-          />
-          <span class="brand-name">SBG Builders</span>
+      <div class="nav__inner">
+        <a class="nav__brand" href="./index.html" aria-label="SBG Builders home">
+          <div class="nav__logo">
+            <img
+              class="nav__logoImg"
+              src="./assets/img/logo.avif"
+              alt="SBG Builders logo"
+              width="36"
+              height="36"
+              loading="eager"
+              decoding="async"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <span class="nav__wordmark">SBG Builders</span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-            <span class="sr-only">Open menu</span>
-            <span class="nav-toggle-lines" aria-hidden="true"></span>
-          </button>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-          <ul id="nav-menu" class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="is-active" href="services.html" aria-current="page">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html" class="nav-cta">Contact</a></li>
-          </ul>
-        </nav>
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html" aria-current="page">Services</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html" class="nav__cta">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main id="main" class="site-main" role="main">
+  <main id="main" role="main">
     <!-- Page Hero -->
-    <section class="page-hero">
+    <section class="hero hero--page">
+      <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600')"></div>
+      
       <div class="container">
-        <div class="page-hero-panel glass">
-          <p class="eyebrow">Services</p>
+        <div class="hero__content">
+          <p class="kicker">Services</p>
           <h1>Commercial construction, delivered with discipline.</h1>
           <p class="lead">
             SBG Builders supports owners, brokers, and property teams with preconstruction clarity, reliable execution,
             and clean closeouts. We build environments that operate well and hand over clean.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.html">Request a bid</a>
-            <a class="btn btn-secondary" href="projects.html">View projects</a>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="./contact.html">Request a bid</a>
+            <a class="btn btn--ghost" href="./projects.html">View projects</a>
           </div>
-
-          <ul class="hero-metrics" aria-label="Service highlights">
-            <li>
-              <span class="metric-value">Precon</span>
-              <span class="metric-label">Budget + schedule realism</span>
-            </li>
-            <li>
-              <span class="metric-value">GC</span>
-              <span class="metric-label">Field leadership + trade coordination</span>
-            </li>
-            <li>
-              <span class="metric-value">Closeout</span>
-              <span class="metric-label">Turnover built for operations</span>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
@@ -90,158 +79,191 @@
     <!-- Core Services -->
     <section class="section">
       <div class="container">
-        <header class="section-head">
+        <div class="section__head">
           <h2>Core capabilities</h2>
-          <p>
+          <p class="muted">
             A focused set of services for commercial environments. If your project needs certainty, coordination,
             and a professional handoff, this is our lane.
           </p>
-        </header>
+        </div>
 
-        <div class="grid grid-3">
-          <article class="card glass">
-            <h3>Preconstruction</h3>
-            <p>
-              Early planning to reduce surprises. We align scope, budget, schedule, long-lead items, and constraints
-              before boots hit the ground.
-            </p>
-            <ul class="list">
-              <li>Concept budgets and cost drivers</li>
-              <li>Schedule development and milestone planning</li>
-              <li>Value alignment, alternates, and options</li>
-              <li>Trade input and constructability review</li>
-            </ul>
+        <div class="service-grid reveal">
+          <article class="service-card glass">
+            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800')"></div>
+            <div class="service-card__body">
+              <h3>Preconstruction</h3>
+              <p>
+                Early planning to reduce surprises. We align scope, budget, schedule, long-lead items, and constraints
+                before boots hit the ground.
+              </p>
+              <ul class="list">
+                <li>Concept budgets and cost drivers</li>
+                <li>Schedule development and milestone planning</li>
+                <li>Value alignment, alternates, and options</li>
+                <li>Trade input and constructability review</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card glass">
-            <h3>General Contracting</h3>
-            <p>
-              Full-scope execution with experienced site supervision, tight coordination, and high visibility.
-              We build calmly, document clearly, and protect the timeline.
-            </p>
-            <ul class="list">
-              <li>Trade procurement and bid leveling</li>
-              <li>On-site safety and quality management</li>
-              <li>Submittals, RFIs, and change control</li>
-              <li>Weekly reporting and schedule updates</li>
-            </ul>
+          <article class="service-card glass">
+            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=800')"></div>
+            <div class="service-card__body">
+              <h3>General Contracting</h3>
+              <p>
+                Full-scope execution with experienced site supervision, tight coordination, and high visibility.
+                We build calmly, document clearly, and protect the timeline.
+              </p>
+              <ul class="list">
+                <li>Trade procurement and bid leveling</li>
+                <li>On-site safety and quality management</li>
+                <li>Submittals, RFIs, and change control</li>
+                <li>Weekly reporting and schedule updates</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card glass">
-            <h3>Tenant Improvements</h3>
-            <p>
-              TI work where speed, cleanliness, and coordination matter. We understand occupied buildings
-              and the realities of retail and office turnover.
-            </p>
-            <ul class="list">
-              <li>After-hours and phased work planning</li>
-              <li>Landlord coordination and requirements</li>
-              <li>Minimized disruption to operations</li>
-              <li>Closeout tailored for property teams</li>
-            </ul>
+          <article class="service-card glass">
+            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800')"></div>
+            <div class="service-card__body">
+              <h3>Tenant Improvements</h3>
+              <p>
+                TI work where speed, cleanliness, and coordination matter. We understand occupied buildings
+                and the realities of retail and office turnover.
+              </p>
+              <ul class="list">
+                <li>After-hours and phased work planning</li>
+                <li>Landlord coordination and requirements</li>
+                <li>Minimized disruption to operations</li>
+                <li>Closeout tailored for property teams</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card glass">
-            <h3>Construction Management</h3>
-            <p>
-              Owner-side support to manage risk and keep teams aligned. We provide structure, reporting,
-              and accountability from start to finish.
-            </p>
-            <ul class="list">
-              <li>Budget tracking and variance reporting</li>
-              <li>Schedule oversight and milestone control</li>
-              <li>Decision logs and issue resolution</li>
-              <li>Closeout planning and turnover support</li>
-            </ul>
+          <article class="service-card glass">
+            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800')"></div>
+            <div class="service-card__body">
+              <h3>Construction Management</h3>
+              <p>
+                Owner-side support to manage risk and keep teams aligned. We provide structure, reporting,
+                and accountability from start to finish.
+              </p>
+              <ul class="list">
+                <li>Budget tracking and variance reporting</li>
+                <li>Schedule oversight and milestone control</li>
+                <li>Decision logs and issue resolution</li>
+                <li>Closeout planning and turnover support</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card glass">
-            <h3>Design-Build Coordination</h3>
-            <p>
-              When speed matters, we coordinate design decisions with build realities. We support a smooth
-              path from intent to constructable documents.
-            </p>
-            <ul class="list">
-              <li>Design schedule alignment</li>
-              <li>Constructability and scope clarity</li>
-              <li>Long-lead identification and early release</li>
-              <li>Budget control through design phases</li>
-            </ul>
+          <article class="service-card glass">
+            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800')"></div>
+            <div class="service-card__body">
+              <h3>Design-Build Coordination</h3>
+              <p>
+                When speed matters, we coordinate design decisions with build realities. We support a smooth
+                path from intent to constructable documents.
+              </p>
+              <ul class="list">
+                <li>Design schedule alignment</li>
+                <li>Constructability and scope clarity</li>
+                <li>Long-lead identification and early release</li>
+                <li>Budget control through design phases</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card glass">
-            <h3>Closeout and Turnover</h3>
-            <p>
-              Closeout is a deliverable, not an afterthought. We prioritize documentation, punch completion,
-              and a professional handoff to operations.
-            </p>
-            <ul class="list">
-              <li>Punch tracking and resolution</li>
-              <li>O&amp;M manuals and warranty documentation</li>
-              <li>As-builts and turnover packages</li>
-              <li>Final inspections and sign-offs</li>
-            </ul>
+          <article class="service-card glass">
+            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800')"></div>
+            <div class="service-card__body">
+              <h3>Closeout and Turnover</h3>
+              <p>
+                Closeout is a deliverable, not an afterthought. We prioritize documentation, punch completion,
+                and a professional handoff to operations.
+              </p>
+              <ul class="list">
+                <li>Punch tracking and resolution</li>
+                <li>O&M manuals and warranty documentation</li>
+                <li>As-builts and turnover packages</li>
+                <li>Final inspections and sign-offs</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- Process -->
-    <section class="section section-alt">
+    <section class="section section--alt">
       <div class="container">
-        <header class="section-head">
+        <div class="section__head">
           <h2>How we run projects</h2>
-          <p>
+          <p class="muted">
             Predictable outcomes come from repeatable systems. This is the standard operating rhythm
             we bring to every job.
           </p>
-        </header>
+        </div>
 
-        <ol class="steps">
-          <li class="step glass">
-            <h3>1. Align scope</h3>
-            <p>
-              Clarify goals, constraints, timelines, and decision-makers. Establish what “done” looks like and how
-              success will be measured.
-            </p>
-          </li>
-          <li class="step glass">
-            <h3>2. Lock a plan</h3>
-            <p>
-              Build a practical schedule and budget. Identify long-lead items, access restrictions, inspections,
-              and any operational constraints.
-            </p>
-          </li>
-          <li class="step glass">
-            <h3>3. Execute with visibility</h3>
-            <p>
-              Weekly updates, documented decisions, clean jobsite standards, and rapid issue escalation.
-              No surprises, no silent failures.
-            </p>
-          </li>
-          <li class="step glass">
-            <h3>4. Deliver clean closeout</h3>
-            <p>
-              Punch completion, turnover documentation, warranty clarity, and a handoff that is usable for facility
-              teams on day one.
-            </p>
-          </li>
-        </ol>
+        <div class="steps reveal">
+          <div class="step glass">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h3>Align scope</h3>
+              <p>
+                Clarify goals, constraints, timelines, and decision-makers. Establish what "done" looks like and how
+                success will be measured.
+              </p>
+            </div>
+          </div>
+
+          <div class="step glass">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h3>Lock a plan</h3>
+              <p>
+                Build a practical schedule and budget. Identify long-lead items, access restrictions, inspections,
+                and any operational constraints.
+              </p>
+            </div>
+          </div>
+
+          <div class="step glass">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h3>Execute with visibility</h3>
+              <p>
+                Weekly updates, documented decisions, clean jobsite standards, and rapid issue escalation.
+                No surprises, no silent failures.
+              </p>
+            </div>
+          </div>
+
+          <div class="step glass">
+            <div class="step__number">4</div>
+            <div class="step__content">
+              <h3>Deliver clean closeout</h3>
+              <p>
+                Punch completion, turnover documentation, warranty clarity, and a handoff that is usable for facility
+                teams on day one.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Industries / Project Types -->
     <section class="section">
       <div class="container">
-        <header class="section-head">
+        <div class="section__head">
           <h2>Project types</h2>
-          <p>
+          <p class="muted">
             Commercial environments with real stakeholders, real timelines, and real constraints.
           </p>
-        </header>
+        </div>
 
-        <div class="grid grid-2">
-          <div class="card glass">
+        <div class="split-grid reveal">
+          <div class="tile glass">
             <h3>Office and workplace</h3>
             <p>Renovations, tenant improvements, and phased builds with minimal disruption.</p>
             <ul class="list">
@@ -252,7 +274,7 @@
             </ul>
           </div>
 
-          <div class="card glass">
+          <div class="tile glass">
             <h3>Retail and hospitality</h3>
             <p>Fast-turn spaces with high finish expectations and tight coordination windows.</p>
             <ul class="list">
@@ -263,7 +285,7 @@
             </ul>
           </div>
 
-          <div class="card glass">
+          <div class="tile glass">
             <h3>Industrial and light manufacturing</h3>
             <p>Functional builds with safety, access, and operational continuity in mind.</p>
             <ul class="list">
@@ -274,7 +296,7 @@
             </ul>
           </div>
 
-          <div class="card glass">
+          <div class="tile glass">
             <h3>Multi-tenant and property upgrades</h3>
             <p>Work built for long-term ownership, with documentation and turnover that property teams need.</p>
             <ul class="list">
@@ -288,117 +310,21 @@
       </div>
     </section>
 
-    <!-- Safety / Quality -->
-    <section class="section section-alt">
-      <div class="container">
-        <header class="section-head">
-          <h2>Safety, quality, and compliance</h2>
-          <p>
-            We treat safety and quality as operating systems, not slogans. Owners and tenants should feel the difference.
-          </p>
-        </header>
-
-        <div class="grid grid-3">
-          <article class="card glass">
-            <h3>Jobsite standards</h3>
-            <ul class="list">
-              <li>Daily housekeeping and controlled access</li>
-              <li>Signage, PPE expectations, and visitor protocol</li>
-              <li>Clear staging plans and material control</li>
-              <li>Risk controls for occupied buildings</li>
-            </ul>
-          </article>
-
-          <article class="card glass">
-            <h3>Quality management</h3>
-            <ul class="list">
-              <li>Submittal review discipline</li>
-              <li>Hold points for critical scopes</li>
-              <li>Punch tracking with accountable owners</li>
-              <li>Closeout built into the schedule, not tacked on</li>
-            </ul>
-          </article>
-
-          <article class="card glass">
-            <h3>Documentation</h3>
-            <ul class="list">
-              <li>Weekly status updates and photos</li>
-              <li>Decision logs and change tracking</li>
-              <li>RFI and submittal transparency</li>
-              <li>Turnover packages owners can actually use</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-      <div class="container">
-        <header class="section-head">
-          <h2>FAQ</h2>
-          <p>Quick answers for common pre-bid and preconstruction questions.</p>
-        </header>
-
-        <div class="faq">
-          <details class="faq-item glass">
-            <summary>Do you work in occupied buildings?</summary>
-            <div class="faq-body">
-              <p>
-                Yes. We plan access, noise, dust control, after-hours work, and phasing with the goal of protecting
-                ongoing operations and tenant experience.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item glass">
-            <summary>How do you handle changes?</summary>
-            <div class="faq-body">
-              <p>
-                We document scope impacts quickly. You get pricing, schedule impact, and options before work proceeds.
-                No surprises at the end.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item glass">
-            <summary>What do you need to price a project?</summary>
-            <div class="faq-body">
-              <p>
-                At minimum: drawings, scope narrative, site constraints, schedule targets, and any landlord requirements.
-                If documents are early, we can start with a ROM budget and tighten it as design develops.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item glass">
-            <summary>How do you keep owners informed?</summary>
-            <div class="faq-body">
-              <p>
-                Weekly updates with schedule status, decisions needed, risks, and photos. We keep communication consistent,
-                predictable, and written.
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA -->
-    <section class="section cta">
+    <section class="section section--cta">
       <div class="container">
-        <div class="cta-panel glass">
+        <div class="cta reveal">
           <h2>Ready to price your project?</h2>
           <p>
             Send your drawings or a short scope summary. We will respond with next steps and a clear path to estimate,
             schedule, and execution.
           </p>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="contact.html">Contact SBG Builders</a>
-            <a class="btn btn-secondary" href="about.html">Learn about our approach</a>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="./contact.html">Contact SBG Builders</a>
+            <a class="btn btn--ghost" href="./about.html">Learn about our approach</a>
           </div>
-          <p class="fineprint">
-            This is a mock site for client review. Final service scope and licensing details will be confirmed in production content.
+          <p class="note">
+            This is a mock site for client review. Final service scope will be confirmed in production content.
           </p>
         </div>
       </div>
@@ -406,61 +332,111 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="index.html" aria-label="SBG Builders home">
-            <img
-              class="brand-logo"
-              src="assets/img/logo.avif"
-              alt="SBG Builders logo"
-              width="32"
-              height="32"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="brand-name">SBG Builders</span>
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__col footer__col--brand">
+          <a class="nav__brand" href="./index.html" aria-label="SBG Builders home">
+            <div class="nav__logo">
+              <img
+                class="nav__logoImg"
+                src="./assets/img/logo.avif"
+                alt="SBG Builders logo"
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="nav__wordmark">SBG Builders</span>
           </a>
-          <p class="muted">
-            Commercial construction partner for owners and property teams across Southern California.
+          <p class="footer__tagline">Commercial construction partner for owners and property teams across Southern California.</p>
+          
+          <div class="footer__social">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+          
+          <p class="footer__copy">© <span id="year"></span> SBG Builders. All rights reserved.</p>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer__col">
+          <h3 class="footer__title">Headquarters</h3>
+          <address class="footer__address">
+            100 Avenida La Pata 228<br>
+            San Clemente, CA 92673
+          </address>
+          <p class="footer__contact">
+            <a href="tel:+19492888708">949-288-8708</a><br>
+            <a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a>
           </p>
         </div>
 
-        <div class="footer-links">
-          <h3 class="footer-title">Pages</h3>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html" aria-current="page">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <!-- Quick Links Column -->
+        <div class="footer__col">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
 
-        <div class="footer-links">
-          <h3 class="footer-title">Policies</h3>
-          <ul>
-            <li><a href="accessibility.html">Accessibility</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
+        <!-- Legal Column -->
+        <div class="footer__col">
+          <h3 class="footer__title">Legal</h3>
+          <ul class="footer__links">
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./accessibility.html">Accessibility Statement</a></li>
           </ul>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="muted">© <span id="year"></span> SBG Builders. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
-
-  <!-- Small, page-safe fallback if your main.js doesn't set the year -->
   <script>
-    (function () {
-      var el = document.getElementById('year');
-      if (el && !el.textContent) el.textContent = String(new Date().getFullYear());
-    })();
+    // Nav scroll effect
+    const nav = document.querySelector('.nav');
+    const navToggle = document.querySelector('.nav__toggle');
+    const navMenu = document.querySelector('.nav__menu');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav--solid');
+      } else {
+        nav.classList.remove('nav--solid');
+      }
+    });
+
+    // Mobile menu toggle
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Year
+    const yearEl = document.getElementById('year');
+    if (yearEl && !yearEl.textContent) {
+      yearEl.textContent = String(new Date().getFullYear());
+    }
   </script>
 </body>
 </html>
-
