@@ -3,205 +3,253 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Accessibility | SBG Builders</title>
-  <meta name="description" content="Accessibility Statement for SBG Builders. Our commitment to accessible digital experiences aligned to WCAG 2.2 AA." />
+  <title>Accessibility Statement | SBG Builders</title>
+  <meta name="description" content="Accessibility Statement for SBG Builders website." />
 
-  <link rel="icon" href="assets/img/logo.avif" type="image/avif" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <meta property="og:title" content="Accessibility | SBG Builders" />
-  <meta property="og:description" content="SBG Builders is committed to accessibility and follows WCAG 2.2 Level AA as our standard." />
-  <meta property="og:type" content="website" />
+  <link rel="icon" href="./assets/img/logo.avif" type="image/avif" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Header / Nav -->
-  <header class="site-header" role="banner">
+  <!-- Fixed Navigation -->
+  <nav class="nav nav--solid" role="banner">
     <div class="container">
-      <div class="nav-wrap">
-        <a class="brand" href="index.html" aria-label="SBG Builders home">
-          <img
-            class="brand-logo"
-            src="assets/img/logo.avif"
-            alt="SBG Builders logo"
-            width="36"
-            height="36"
-            loading="eager"
-            decoding="async"
-          />
-          <span class="brand-name">SBG Builders</span>
+      <div class="nav__inner">
+        <a class="nav__brand" href="./index.html" aria-label="SBG Builders home">
+          <div class="nav__logo">
+            <img
+              class="nav__logoImg"
+              src="./assets/img/logo.avif"
+              alt="SBG Builders logo"
+              width="36"
+              height="36"
+              loading="eager"
+              decoding="async"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <span class="nav__wordmark">SBG Builders</span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-            <span class="sr-only">Open menu</span>
-            <span class="nav-toggle-lines" aria-hidden="true"></span>
-          </button>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-          <ul id="nav-menu" class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html" class="nav-cta">Contact</a></li>
-          </ul>
-        </nav>
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html" class="nav__cta">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main id="main" class="site-main" role="main">
-    <section class="page-hero">
+  <main id="main" role="main">
+    <section class="section" style="padding-top: 120px;">
       <div class="container">
-        <div class="page-hero-panel glass">
-          <p class="eyebrow">Legal</p>
+        <div class="legal-content">
           <h1>Accessibility Statement</h1>
-          <p class="lead">
-            SBG Builders is committed to ensuring our digital experiences are usable by everyone.
-          </p>
+          <p class="muted">Last Updated: January 30, 2026</p>
+
+          <div class="legal-section">
+            <h2>Our Commitment</h2>
+            <p>
+              SBG Builders is committed to ensuring digital accessibility for people with disabilities. We are
+              continually improving the user experience for everyone and applying the relevant accessibility standards
+              to ensure we provide equal access to all our users.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Standards and Conformance</h2>
+            <p>
+              We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA standards published
+              by the World Wide Web Consortium (W3C). These guidelines explain how to make web content more accessible
+              for people with disabilities and user-friendly for everyone.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Measures to Support Accessibility</h2>
+            <p>SBG Builders takes the following measures to ensure accessibility of our website:</p>
+            <ul class="list">
+              <li>Include accessibility as part of our mission statement</li>
+              <li>Integrate accessibility into our procurement practices</li>
+              <li>Provide continual accessibility training for our staff</li>
+              <li>Include people with disabilities in our design personas</li>
+              <li>Employ formal accessibility quality assurance methods</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2>Accessibility Features</h2>
+            <p>Our website includes the following accessibility features:</p>
+            <ul class="list">
+              <li><strong>Keyboard Navigation:</strong> All functionality is available using keyboard controls</li>
+              <li><strong>Screen Reader Compatibility:</strong> Content is structured for screen reader users</li>
+              <li><strong>Text Alternatives:</strong> Images include descriptive alt text</li>
+              <li><strong>Color Contrast:</strong> Sufficient contrast ratios throughout the site</li>
+              <li><strong>Resizable Text:</strong> Text can be resized up to 200% without loss of content or functionality</li>
+              <li><strong>Clear Navigation:</strong> Consistent navigation structure across all pages</li>
+              <li><strong>Forms:</strong> Clearly labeled form fields with error identification</li>
+              <li><strong>Skip Links:</strong> Skip navigation links for keyboard users</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2>Technical Specifications</h2>
+            <p>
+              Accessibility of our website relies on the following technologies to work with the particular combination
+              of web browser and any assistive technologies or plugins installed on your computer:
+            </p>
+            <ul class="list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>WAI-ARIA (Accessible Rich Internet Applications)</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2>Limitations and Alternatives</h2>
+            <p>
+              Despite our best efforts to ensure accessibility, there may be some limitations. If you encounter
+              accessibility barriers on our website, please let us know so we can work to resolve the issue.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Assessment Approach</h2>
+            <p>SBG Builders assessed the accessibility of our website by the following approaches:</p>
+            <ul class="list">
+              <li>Self-evaluation</li>
+              <li>External evaluation by accessibility consultants</li>
+              <li>Automated testing tools</li>
+              <li>Manual testing with assistive technologies</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2>Feedback and Contact Information</h2>
+            <p>
+              We welcome your feedback on the accessibility of the SBG Builders website. Please let us know if you
+              encounter accessibility barriers:
+            </p>
+            <address style="font-style: normal; margin-top: 20px;">
+              <strong>SBG Builders</strong><br>
+              100 Avenida La Pata 228<br>
+              San Clemente, CA 92673<br>
+              Phone: <a href="tel:+19492888708">949-288-8708</a><br>
+              Email: <a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a>
+            </address>
+            <p style="margin-top: 20px;">
+              We aim to respond to accessibility feedback within 2 business days. If you need immediate assistance,
+              please call us directly.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Browser and Assistive Technology Compatibility</h2>
+            <p>Our website is designed to be compatible with the following assistive technologies:</p>
+            <ul class="list">
+              <li>Recent versions of popular screen readers (JAWS, NVDA, VoiceOver)</li>
+              <li>Speech recognition software</li>
+              <li>Screen magnification software</li>
+              <li>Browser accessibility features</li>
+            </ul>
+            <p>Our website is compatible with:</p>
+            <ul class="list">
+              <li>Recent versions of Chrome, Firefox, Safari, and Edge</li>
+              <li>Mobile browsers on iOS and Android devices</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2>Formal Complaints</h2>
+            <p>
+              If you are not satisfied with our response to your accessibility concern, you may contact the
+              appropriate regulatory authority in your jurisdiction.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Ongoing Improvements</h2>
+            <p>
+              We are continuously working to improve the accessibility of our website. As we implement new features
+              and content, we will continue to review and improve accessibility. This accessibility statement will
+              be updated as needed to reflect these efforts.
+            </p>
+          </div>
+
+          <div class="hero__actions" style="margin-top: 40px;">
+            <a class="btn btn--solid" href="./contact.html">Report accessibility issue</a>
+            <a class="btn btn--ghost" href="./index.html">Back to home</a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container narrow">
-        <article class="policy glass">
-          <p>
-            SBG Builders (“we,” “our,” or the “Company”) is committed to diversity, inclusion, and accessibility.
-            These values are central to how we design, develop, and deliver our digital content and services,
-            including our website(s), applications, and other online tools (collectively, the “Digital Properties”).
-            We strive to ensure that our Digital Properties are accessible to everyone, including individuals with
-            disabilities.
-          </p>
-
-          <h2>Commitment to Accessibility</h2>
-          <p>
-            We are actively working to make our Digital Properties accessible and usable by people of all abilities
-            and disabilities. To achieve this, we follow the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA
-            as our standard for accessibility. These guidelines explain how to make web content more accessible for
-            people with visual, auditory, cognitive, and motor impairments.
-          </p>
-
-          <h2>Standards and Ongoing Efforts</h2>
-          <p>
-            We are continuously working to improve accessibility features and regularly review and update our Digital
-            Properties to enhance usability. Efforts may include:
-          </p>
-          <ul class="list">
-            <li>Designing new content in accordance with recognized accessibility standards.</li>
-            <li>Conducting periodic reviews and testing for accessibility compliance.</li>
-            <li>Incorporating user feedback and accessibility best practices into ongoing development.</li>
-          </ul>
-          <p>
-            Despite these efforts, portions of our Digital Properties may not yet meet all accessibility standards.
-            Some content or third-party features may be temporarily inaccessible to some users, and we are committed
-            to addressing these areas over time.
-          </p>
-
-          <h2>Known Limitations</h2>
-          <p>
-            While we work to make our entire Digital Properties accessible, there are situations where full conformance
-            may not yet be achievable:
-          </p>
-          <ul class="list">
-            <li>Some third-party content or widgets not fully controlled by SBG Builders could have accessibility barriers.</li>
-            <li>Archived content or older pages may not meet current accessibility standards.</li>
-            <li>We aim to address accessibility issues as they are identified and prioritized.</li>
-          </ul>
-
-          <h2>Compatibility and Technical Support</h2>
-          <p>
-            Our Digital Properties are designed to be compatible with modern assistive technologies and devices.
-            However, some combinations of browsers and assistive tools (such as screen readers or magnification
-            software) might not be fully supported in all cases.
-          </p>
-
-          <h2>Feedback and Contact Information</h2>
-          <p>
-            We welcome your feedback on the accessibility of SBG Builders’ Digital Properties. If you encounter
-            accessibility barriers or have suggestions to improve access, please contact us:
-          </p>
-          <p>
-            Email: <a href="mailto:info@sbgbuilders.com">info@sbgbuilders.com</a>
-          </p>
-
-          <p>When reporting an issue, please include:</p>
-          <ul class="list">
-            <li>The specific web page or feature where the issue occurred</li>
-            <li>The type of accessibility challenge you experienced</li>
-            <li>The device, browser, or assistive technology you were using</li>
-          </ul>
-
-          <p>
-            We will do our best to respond within a reasonable timeframe and work toward a solution.
-          </p>
-
-          <h2>Review and Updates</h2>
-          <p>
-            This Accessibility Statement is reviewed at least annually and updated whenever significant changes are made
-            to our Digital Properties or accessibility practices.
-          </p>
-        </article>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="index.html" aria-label="SBG Builders home">
-            <img
-              class="brand-logo"
-              src="assets/img/logo.avif"
-              alt="SBG Builders logo"
-              width="32"
-              height="32"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="brand-name">SBG Builders</span>
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <a class="nav__brand" href="./index.html" aria-label="SBG Builders home">
+            <div class="nav__logo">
+              <img class="nav__logoImg" src="./assets/img/logo.avif" alt="SBG Builders logo" width="48" height="48" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+            </div>
+            <span class="nav__wordmark">SBG Builders</span>
           </a>
-          <p class="muted">
-            Commercial construction partner for owners and property teams across Southern California.
-          </p>
+          <p class="footer__tagline">Commercial construction partner for owners and property teams across Southern California.</p>
+          <div class="footer__social">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+          <p class="footer__copy">© <span id="year"></span> SBG Builders. All rights reserved.</p>
         </div>
-
-        <div class="footer-links">
-          <h3 class="footer-title">Pages</h3>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <div class="footer__col">
+          <h3 class="footer__title">Headquarters</h3>
+          <address class="footer__address">100 Avenida La Pata 228<br>San Clemente, CA 92673</address>
+          <p class="footer__contact"><a href="tel:+19492888708">949-288-8708</a><br><a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a></p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
-
-        <div class="footer-links">
-          <h3 class="footer-title">Policies</h3>
-          <ul>
-            <li><a href="accessibility.html" aria-current="page">Accessibility</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
+        <div class="footer__col">
+          <h3 class="footer__title">Legal</h3>
+          <ul class="footer__links">
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./accessibility.html">Accessibility Statement</a></li>
           </ul>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="muted">© <span id="year"></span> SBG Builders. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
   <script>
-    (function () {
-      var el = document.getElementById('year');
-      if (el && !el.textContent) el.textContent = String(new Date().getFullYear());
-    })();
+    const navToggle = document.querySelector('.nav__toggle');
+    const navMenu = document.querySelector('.nav__menu');
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    const yearEl = document.getElementById('year');
+    if (yearEl && !yearEl.textContent) yearEl.textContent = String(new Date().getFullYear());
   </script>
 </body>
 </html>
-
