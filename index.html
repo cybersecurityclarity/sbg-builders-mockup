@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBG Builders | General Contractor</title>
+  <meta name="description" content="SBG Builders is a Southern California general contractor delivering precise, predictable projects with integrity." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Cookie Banner -->
+  <div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Cookie preferences">
+    <div class="cookie__inner">
+      <p class="cookie__text">We use cookies to improve your experience. By using this site, you agree to our cookie policy.</p>
+      <div class="cookie__actions">
+        <button class="btn btn--ghost" id="cookieSettings">Settings</button>
+        <button class="btn btn--solid" id="cookieAccept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="index.html" aria-label="SBG Builders home">
+        <span class="nav__logo">SBG</span>
+        <span class="nav__wordmark">Builders</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="kicker">Southern California General Contractor</p>
+          <h1>Precise. Predictable. Built with Integrity.</h1>
+          <p class="lead">
+            We deliver commercial construction with disciplined planning, clean execution, and a team you can trust.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="contact.html">Request a Bid Call</a>
+            <a class="btn btn--ghost" href="projects.html">View Projects</a>
+          </div>
+        </div>
+
+        <div class="hero__panel">
+          <div class="hero__panelItem">
+            <span class="label">Focus</span>
+            <span class="value">Systems</span>
+          </div>
+          <div class="hero__panelItem">
+            <span class="label">Approach</span>
+            <span class="value">Balance</span>
+          </div>
+          <div class="hero__panelItem">
+            <span class="label">Outcome</span>
+            <span class="value">Growth</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="section section--tight">
+      <div class="container metrics">
+        <div class="metric reveal">
+          <div class="metric__num" data-count="12">0</div>
+          <div class="metric__label">Years operating</div>
+        </div>
+        <div class="metric reveal">
+          <div class="metric__num" data-count="250">0</div>
+          <div class="metric__label">Projects supported</div>
+        </div>
+        <div class="metric reveal">
+          <div class="metric__num" data-count="98">0</div>
+          <div class="metric__label">On-time mindset</div>
+        </div>
+      </div>
+      <p class="container note reveal">Mock metrics for preview. Replace with real numbers after approval.</p>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Featured Projects</h2>
+          <p class="muted">A portfolio that shows quality, coordination, and consistency.</p>
+        </div>
+
+        <div class="cards" id="featuredProjects"></div>
+
+        <div class="section__cta reveal">
+          <a class="btn btn--ghost" href="projects.html">See all projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Capabilities</h2>
+          <p class="muted">Clear scope, clean schedules, accountable delivery.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="tile reveal">
+            <h3>Pre-Construction</h3>
+            <p>Planning, budgets, schedules, and risk control before the first day on site.</p>
+          </div>
+          <div class="tile reveal">
+            <h3>Tenant Improvements</h3>
+            <p>Fast, coordinated build-outs with minimal disruption and strong trade management.</p>
+          </div>
+          <div class="tile reveal">
+            <h3>Commercial GC</h3>
+            <p>Disciplined execution, safety-first delivery, and stakeholder-ready documentation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>What Clients Say</h2>
+          <p class="muted">Proof beats promises.</p>
+        </div>
+
+        <div class="quotes reveal" id="testimonials"></div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section--cta">
+      <div class="container cta reveal">
+        <h2>Ready to build with a team you can trust?</h2>
+        <p class="muted">Tell us what you’re bidding or building, we’ll respond fast.</p>
+        <a class="btn btn--solid" href="contact.html">Contact SBG Builders</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand">SBG Builders</div>
+        <div class="footer__muted">Southern California General Contractor</div>
+      </div>
+      <div class="footer__links">
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
 
