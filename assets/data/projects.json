@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "coastal-office-buildout",
+    "title": "Coastal Office Build-Out",
+    "category": "Tenant Improvement",
+    "location": "Orange County, CA",
+    "cover": "assets/img/p1.jpg",
+    "featured": true
+  },
+  {
+    "slug": "modern-retail-flagship",
+    "title": "Modern Retail Flagship",
+    "category": "Retail",
+    "location": "Irvine, CA",
+    "cover": "assets/img/p2.jpg",
+    "featured": true
+  },
+  {
+    "slug": "medical-clinic-renovation",
+    "title": "Medical Clinic Renovation",
+    "category": "Healthcare",
+    "location": "San Diego, CA",
+    "cover": "assets/img/p3.jpg",
+    "featured": true
+  },
+  {
+    "slug": "senior-living-refresh",
+    "title": "Senior Living Refresh",
+    "category": "Senior Living",
+    "location": "Riverside, CA",
+    "cover": "assets/img/p4.jpg",
+    "featured": true
+  },
+  {
+    "slug": "restaurant-kitchen-upgrade",
+    "title": "Restaurant Kitchen Upgrade",
+    "category": "Hospitality",
+    "location": "Costa Mesa, CA",
+    "cover": "assets/img/p5.jpg",
+    "featured": true
+  },
+  {
+    "slug": "light-industrial-improvements",
+    "title": "Light Industrial Improvements",
+    "category": "Industrial",
+    "location": "Ontario, CA",
+    "cover": "assets/img/p6.jpg",
+    "featured": true
+  }
+]
