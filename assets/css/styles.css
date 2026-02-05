@@ -207,14 +207,16 @@ img {
   overflow: hidden;
 }
 
-.nav__logo--ridgeline {
-  background: #000;
-  border-color: rgba(255, 255, 255, 0.2);
-  padding: 4px;
+.nav__logo--icon {
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.nav__logo--ridgeline .nav__logoImg {
-  filter: brightness(1.1);
+.nav__logo--icon .nav__logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav__logoImg {
@@ -305,12 +307,14 @@ img {
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
-.hero__bg--ridgeline {
-  background: url("../img/ridgeline.svg") no-repeat center bottom,
-    linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
-  background-size: 100% auto, cover;
-  filter: none;
-  opacity: 1;
+.hero__bg--mountain {
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(1.1);
+  opacity: 0.85;
   animation: none;
 }
 
@@ -905,8 +909,54 @@ img {
   padding-bottom: 80px;
 }
 
+.hero--page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero--page .container,
+.hero--page .hero__content {
+  position: relative;
+  z-index: 1;
+}
+
 .hero--short {
   min-height: 50vh;
+}
+
+/* Coming Soon Card */
+.coming-soon-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+}
+
+.coming-soon-card__icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+  opacity: 0.4;
+}
+
+.coming-soon-card__title {
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.coming-soon-card__text {
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0;
+  font-style: italic;
 }
 
 /* Split Grid */
