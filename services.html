@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | SBG Builders</title>
-  <meta name="description" content="Commercial construction services by SBG Builders. Preconstruction, general contracting, tenant improvements, design-build coordination, and construction management." />
+  <meta name="description" content="Construction services for owners, tenants, and project partners. Comprehensive preconstruction through closeout services." />
 
-  <link rel="icon" href="./assets/img/logo.avif" type="image/avif" />
+  <link rel="icon" href="./assets/img/Icon - White.png" type="image/png" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <meta property="og:title" content="Services | SBG Builders" />
-  <meta property="og:description" content="Commercial construction services built for predictability, schedule control, and clean closeouts." />
+  <meta property="og:description" content="Construction Services for Owners, Tenants & Project Partners" />
   <meta property="og:type" content="website" />
 </head>
 
@@ -47,6 +47,13 @@
           <li><a href="./about.html">About</a></li>
           <li><a href="./services.html" aria-current="page">Services</a></li>
           <li><a href="./projects.html">Projects</a></li>
+          <li class="nav__menu-dropdown">
+            <a href="#" class="nav__dropdown-toggle">Work With Us</a>
+            <ul class="nav__dropdown">
+              <li><a href="./careers.html">Careers</a></li>
+              <li><a href="./subcontractor-prequalification.html">Subcontractor Prequalification</a></li>
+            </ul>
+          </li>
           <li><a href="./contact.html" class="nav__cta">Contact</a></li>
         </ul>
       </div>
@@ -55,255 +62,137 @@
 
   <main id="main" role="main">
     <!-- Page Hero -->
-    <section class="hero hero--page">
-      <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600')"></div>
-      
+    <section class="services-hero">
       <div class="container">
-        <div class="hero__content">
-          <p class="kicker">Services</p>
-          <h1>Commercial construction, delivered with discipline.</h1>
-          <p class="lead">
-            SBG Builders supports owners, brokers, and property teams with preconstruction clarity, reliable execution,
-            and clean closeouts. We build environments that operate well and hand over clean.
+        <div class="services-hero__content">
+          <h1 class="services-hero__title">Construction Services for Owners, Tenants & Project Partners</h1>
+          <p class="services-hero__subtitle">
+            Choosing the right general contractor defines the entire project experience. At SBG Builders, we deliver a streamlined, modern approach to construction—powered by smart systems, balanced partnerships, and a dedication to long-term growth.
           </p>
+        </div>
+      </div>
+    </section>
 
-          <div class="hero__actions">
-            <a class="btn btn--solid" href="./contact.html">Request a bid</a>
-            <a class="btn btn--ghost" href="./projects.html">View projects</a>
+    <!-- Services Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="services-detailed-grid">
+          <!-- Pre-Construction -->
+          <div class="service-detailed glass reveal">
+            <div class="service-detailed__icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+              </svg>
+            </div>
+            <h3 class="service-detailed__title">Pre-Construction</h3>
+            <p class="service-detailed__desc">Streamlined systems that bring clarity before construction begins.</p>
+            <ul class="service-detailed__list">
+              <li>Preliminary Budgeting & Cost Modeling</li>
+              <li>Proforma & Feasibility Analysis</li>
+              <li>Value Engineering & Cost Optimization</li>
+              <li>Due Diligence & Site Evaluation</li>
+              <li>Work Letter & Lease Review Support</li>
+              <li>Constructability Review</li>
+              <li>Design Assist & Design Coordination</li>
+              <li>Scheduling Strategy & Phasing Plans</li>
+              <li>Scope Development & Bid Packaging</li>
+              <li>Real Estate Partner & Broker Support</li>
+            </ul>
+          </div>
+
+          <!-- During Construction -->
+          <div class="service-detailed glass reveal">
+            <div class="service-detailed__icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="service-detailed__title">During Construction</h3>
+            <p class="service-detailed__desc">Balanced partnerships and disciplined management from day one.</p>
+            <ul class="service-detailed__list">
+              <li>General Contracting</li>
+              <li>Design-Build Delivery (Single-Source Accountability)</li>
+              <li>Project & Cost Management</li>
+              <li>Scheduling & Field Supervision</li>
+              <li>Subcontractor Qualification, Procurement and Management</li>
+              <li>Quality Assurance / Quality Control</li>
+              <li>Safety Management</li>
+              <li>Document Control & Compliance</li>
+              <li>Technology-Driven Reporting & Communication</li>
+              <li>Change Management & Risk Mitigation</li>
+            </ul>
+          </div>
+
+          <!-- Closeout & Beyond -->
+          <div class="service-detailed glass reveal">
+            <div class="service-detailed__icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="service-detailed__title">Closeout & Beyond</h3>
+            <p class="service-detailed__desc">Growth through long-term trust, transparency, and support.</p>
+            <ul class="service-detailed__list">
+              <li>Final Inspections & Punchlist Management</li>
+              <li>Closeout Documentation & O&M Manuals</li>
+              <li>Warranty Support & Post-Project Services</li>
+              <li>Turnover Coordination</li>
+              <li>Ongoing Client Relationship Development</li>
+              <li>Portfolio-Wide Planning & Future Project Strategy</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Core Services -->
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>Core capabilities</h2>
-          <p class="muted">
-            A focused set of services for commercial environments. If your project needs certainty, coordination,
-            and a professional handoff, this is our lane.
-          </p>
-        </div>
-
-        <div class="service-grid reveal">
-          <article class="service-card glass">
-            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800')"></div>
-            <div class="service-card__body">
-              <h3>Preconstruction</h3>
-              <p>
-                Early planning to reduce surprises. We align scope, budget, schedule, long-lead items, and constraints
-                before boots hit the ground.
-              </p>
-              <ul class="list">
-                <li>Concept budgets and cost drivers</li>
-                <li>Schedule development and milestone planning</li>
-                <li>Value alignment, alternates, and options</li>
-                <li>Trade input and constructability review</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-card glass">
-            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=800')"></div>
-            <div class="service-card__body">
-              <h3>General Contracting</h3>
-              <p>
-                Full-scope execution with experienced site supervision, tight coordination, and high visibility.
-                We build calmly, document clearly, and protect the timeline.
-              </p>
-              <ul class="list">
-                <li>Trade procurement and bid leveling</li>
-                <li>On-site safety and quality management</li>
-                <li>Submittals, RFIs, and change control</li>
-                <li>Weekly reporting and schedule updates</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-card glass">
-            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800')"></div>
-            <div class="service-card__body">
-              <h3>Tenant Improvements</h3>
-              <p>
-                TI work where speed, cleanliness, and coordination matter. We understand occupied buildings
-                and the realities of retail and office turnover.
-              </p>
-              <ul class="list">
-                <li>After-hours and phased work planning</li>
-                <li>Landlord coordination and requirements</li>
-                <li>Minimized disruption to operations</li>
-                <li>Closeout tailored for property teams</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-card glass">
-            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800')"></div>
-            <div class="service-card__body">
-              <h3>Construction Management</h3>
-              <p>
-                Owner-side support to manage risk and keep teams aligned. We provide structure, reporting,
-                and accountability from start to finish.
-              </p>
-              <ul class="list">
-                <li>Budget tracking and variance reporting</li>
-                <li>Schedule oversight and milestone control</li>
-                <li>Decision logs and issue resolution</li>
-                <li>Closeout planning and turnover support</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-card glass">
-            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800')"></div>
-            <div class="service-card__body">
-              <h3>Design-Build Coordination</h3>
-              <p>
-                When speed matters, we coordinate design decisions with build realities. We support a smooth
-                path from intent to constructable documents.
-              </p>
-              <ul class="list">
-                <li>Design schedule alignment</li>
-                <li>Constructability and scope clarity</li>
-                <li>Long-lead identification and early release</li>
-                <li>Budget control through design phases</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-card glass">
-            <div class="service-card__img" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800')"></div>
-            <div class="service-card__body">
-              <h3>Closeout and Turnover</h3>
-              <p>
-                Closeout is a deliverable, not an afterthought. We prioritize documentation, punch completion,
-                and a professional handoff to operations.
-              </p>
-              <ul class="list">
-                <li>Punch tracking and resolution</li>
-                <li>O&M manuals and warranty documentation</li>
-                <li>As-builts and turnover packages</li>
-                <li>Final inspections and sign-offs</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
+    <!-- Interactive Map Section -->
     <section class="section section--alt">
       <div class="container">
         <div class="section__head">
-          <h2>How we run projects</h2>
-          <p class="muted">
-            Predictable outcomes come from repeatable systems. This is the standard operating rhythm
-            we bring to every job.
-          </p>
+          <h2>Where We Work</h2>
+          <p class="muted">Licensed and actively building across Southern California</p>
         </div>
 
-        <div class="steps reveal">
-          <div class="step glass">
-            <div class="step__number">1</div>
-            <div class="step__content">
-              <h3>Align scope</h3>
-              <p>
-                Clarify goals, constraints, timelines, and decision-makers. Establish what "done" looks like and how
-                success will be measured.
-              </p>
+        <div class="map-container glass reveal">
+          <div class="map-placeholder">
+            <div class="map-legend">
+              <div class="map-legend__item">
+                <span class="map-legend__dot map-legend__dot--licensed"></span>
+                <span class="map-legend__label">Licensed Counties</span>
+              </div>
+              <div class="map-legend__item">
+                <span class="map-legend__dot map-legend__dot--active"></span>
+                <span class="map-legend__label">Active Projects</span>
+              </div>
             </div>
-          </div>
-
-          <div class="step glass">
-            <div class="step__number">2</div>
-            <div class="step__content">
-              <h3>Lock a plan</h3>
-              <p>
-                Build a practical schedule and budget. Identify long-lead items, access restrictions, inspections,
-                and any operational constraints.
-              </p>
+            
+            <div class="map-regions">
+              <div class="map-region" data-region="orange-county">
+                <h4>Orange County</h4>
+                <p class="map-status">Licensed • Active Projects: 2</p>
+              </div>
+              <div class="map-region" data-region="san-diego">
+                <h4>San Diego County</h4>
+                <p class="map-status">Licensed • Active Projects: 1</p>
+              </div>
+              <div class="map-region" data-region="los-angeles">
+                <h4>Los Angeles County</h4>
+                <p class="map-status">Licensed • Coming Soon</p>
+              </div>
+              <div class="map-region" data-region="riverside">
+                <h4>Riverside County</h4>
+                <p class="map-status">Licensed • Coming Soon</p>
+              </div>
             </div>
-          </div>
 
-          <div class="step glass">
-            <div class="step__number">3</div>
-            <div class="step__content">
-              <h3>Execute with visibility</h3>
-              <p>
-                Weekly updates, documented decisions, clean jobsite standards, and rapid issue escalation.
-                No surprises, no silent failures.
-              </p>
-            </div>
-          </div>
-
-          <div class="step glass">
-            <div class="step__number">4</div>
-            <div class="step__content">
-              <h3>Deliver clean closeout</h3>
-              <p>
-                Punch completion, turnover documentation, warranty clarity, and a handoff that is usable for facility
-                teams on day one.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Industries / Project Types -->
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>Project types</h2>
-          <p class="muted">
-            Commercial environments with real stakeholders, real timelines, and real constraints.
-          </p>
-        </div>
-
-        <div class="split-grid reveal">
-          <div class="tile glass">
-            <h3>Office and workplace</h3>
-            <p>Renovations, tenant improvements, and phased builds with minimal disruption.</p>
-            <ul class="list">
-              <li>Conference and collaboration areas</li>
-              <li>Reception and lobby refreshes</li>
-              <li>Back-of-house improvements</li>
-              <li>MEP upgrades and compliance work</li>
-            </ul>
-          </div>
-
-          <div class="tile glass">
-            <h3>Retail and hospitality</h3>
-            <p>Fast-turn spaces with high finish expectations and tight coordination windows.</p>
-            <ul class="list">
-              <li>Store buildouts and remodels</li>
-              <li>Restaurants and service counters</li>
-              <li>Facade updates and signage coordination</li>
-              <li>After-hours and accelerated schedules</li>
-            </ul>
-          </div>
-
-          <div class="tile glass">
-            <h3>Industrial and light manufacturing</h3>
-            <p>Functional builds with safety, access, and operational continuity in mind.</p>
-            <ul class="list">
-              <li>Warehouse improvements</li>
-              <li>Loading, access, and circulation updates</li>
-              <li>Equipment pads and utility coordination</li>
-              <li>Phased work in active facilities</li>
-            </ul>
-          </div>
-
-          <div class="tile glass">
-            <h3>Multi-tenant and property upgrades</h3>
-            <p>Work built for long-term ownership, with documentation and turnover that property teams need.</p>
-            <ul class="list">
-              <li>Common areas and restrooms</li>
-              <li>Exterior improvements and ADA updates</li>
-              <li>Lifecycle repairs and modernization</li>
-              <li>Capital improvement execution support</li>
-            </ul>
+            <p class="map-note">📍 Interactive map visualization - Southern California commercial construction coverage</p>
           </div>
         </div>
       </div>
@@ -313,18 +202,11 @@
     <section class="section section--cta">
       <div class="container">
         <div class="cta reveal">
-          <h2>Ready to price your project?</h2>
-          <p>
-            Send your drawings or a short scope summary. We will respond with next steps and a clear path to estimate,
-            schedule, and execution.
-          </p>
+          <h2 class="cta__headline">SYSTEMS. BALANCE. GROWTH.</h2>
+          <p class="cta__tagline">Let's Build Something Better — Together.</p>
           <div class="hero__actions">
-            <a class="btn btn--solid" href="./contact.html">Contact SBG Builders</a>
-            <a class="btn btn--ghost" href="./about.html">Learn about our approach</a>
+            <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
           </div>
-          <p class="note">
-            This is a mock site for client review. Final service scope will be confirmed in production content.
-          </p>
         </div>
       </div>
     </section>
@@ -434,6 +316,16 @@
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) {
       yearEl.textContent = String(new Date().getFullYear());
+    }
+
+    // Dropdown menu
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
     }
   </script>
 </body>
