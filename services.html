@@ -160,40 +160,51 @@
           <p class="muted">Licensed and actively building across Southern California</p>
         </div>
 
-        <div class="map-container glass reveal">
-          <div class="map-placeholder">
-            <div class="map-legend">
-              <div class="map-legend__item">
-                <span class="map-legend__dot map-legend__dot--licensed"></span>
-                <span class="map-legend__label">Licensed Counties</span>
-              </div>
-              <div class="map-legend__item">
-                <span class="map-legend__dot map-legend__dot--active"></span>
-                <span class="map-legend__label">Active Projects</span>
-              </div>
+        <div class="map-interactive glass reveal">
+          <div class="map-interactive__legend">
+            <div class="map-legend__item">
+              <span class="map-legend__dot map-legend__dot--licensed"></span>
+              <span class="map-legend__label">Licensed Counties</span>
             </div>
-            
-            <div class="map-regions">
-              <div class="map-region" data-region="orange-county">
-                <h4>Orange County</h4>
-                <p class="map-status">Licensed • Active Projects: 2</p>
-              </div>
-              <div class="map-region" data-region="san-diego">
-                <h4>San Diego County</h4>
-                <p class="map-status">Licensed • Active Projects: 1</p>
-              </div>
-              <div class="map-region" data-region="los-angeles">
-                <h4>Los Angeles County</h4>
-                <p class="map-status">Licensed • Coming Soon</p>
-              </div>
-              <div class="map-region" data-region="riverside">
-                <h4>Riverside County</h4>
-                <p class="map-status">Licensed • Coming Soon</p>
-              </div>
+            <div class="map-legend__item">
+              <span class="map-legend__dot map-legend__dot--active"></span>
+              <span class="map-legend__label">Active Projects</span>
             </div>
-
-            <p class="map-note">📍 Interactive map visualization - Southern California commercial construction coverage</p>
           </div>
+          
+          <div class="map-interactive__frame">
+            <iframe 
+              src="https://www.google.com/maps/d/embed?mid=1example&ehbc=2E312F" 
+              width="100%" 
+              height="600" 
+              style="border:0; border-radius: 12px;"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="SBG Builders Service Area Map">
+            </iframe>
+          </div>
+
+          <div class="map-interactive__regions">
+            <div class="map-region-card glass">
+              <h4>Orange County</h4>
+              <p class="map-region-status">Licensed • Active Projects: 2</p>
+            </div>
+            <div class="map-region-card glass">
+              <h4>San Diego County</h4>
+              <p class="map-region-status">Licensed • Active Projects: 1</p>
+            </div>
+            <div class="map-region-card glass">
+              <h4>Los Angeles County</h4>
+              <p class="map-region-status">Licensed • Coming Soon</p>
+            </div>
+            <div class="map-region-card glass">
+              <h4>Riverside County</h4>
+              <p class="map-region-status">Licensed • Coming Soon</p>
+            </div>
+          </div>
+
+          <p class="map-note">📍 Interactive map visualization - Southern California commercial construction coverage</p>
         </div>
       </div>
     </section>
