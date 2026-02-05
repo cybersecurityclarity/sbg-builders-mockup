@@ -207,6 +207,16 @@ img {
   overflow: hidden;
 }
 
+.nav__logo--ridgeline {
+  background: #000;
+  border-color: rgba(255, 255, 255, 0.2);
+  padding: 4px;
+}
+
+.nav__logo--ridgeline .nav__logoImg {
+  filter: brightness(1.1);
+}
+
 .nav__logoImg {
   width: 100%;
   height: 100%;
@@ -293,6 +303,15 @@ img {
   filter: grayscale(100%) contrast(1.05);
   opacity: 0.28;
   animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+.hero__bg--ridgeline {
+  background: url("../img/ridgeline.svg") no-repeat center bottom,
+    linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+  background-size: 100% auto, cover;
+  filter: none;
+  opacity: 1;
+  animation: none;
 }
 
 @keyframes slowZoom {
@@ -450,6 +469,34 @@ img {
   opacity: 1;
 }
 
+.card--placeholder {
+  cursor: default;
+  pointer-events: none;
+}
+
+.card--placeholder .card__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card--placeholder .card__img::after {
+  content: "📋";
+  font-size: 48px;
+  opacity: 0.3;
+}
+
+.card--placeholder:hover {
+  transform: none;
+  border-color: var(--stroke);
+}
+
+.card--placeholder .card__meta {
+  color: var(--muted);
+  font-style: italic;
+}
+
 .card__img {
   height: 170px;
   background: #111;
@@ -561,6 +608,10 @@ img {
   margin: 0 0 18px;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.cta .hero__actions {
+  justify-content: center;
 }
 
 /* Footer - RAM Construction Style */
