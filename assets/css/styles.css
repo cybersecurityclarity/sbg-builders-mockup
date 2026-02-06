@@ -1761,13 +1761,14 @@ img {
 }
 /* Typography Updates - Montserrat for headers, Open Sans for body */
 
-/* Hero Titles - Montserrat Extra Bold - 72-80px */
+/* Hero Titles - Montserrat Black - 80px (Gotham Black equivalent) */
 .hero__content h1,
 .hero__headline-large {
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 80px;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 /* Sub-Headers - Montserrat Bold - 42-48px */
@@ -1928,4 +1929,113 @@ body {
 
 .sbg-pillar-vertical .btn {
   margin-top: 24px;
+}
+
+
+/* Small button variant for S.B.G. pillars */
+.btn--small {
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-top: 16px;
+}
+
+.sbg-pillar .btn {
+  margin-top: 20px;
+}
+
+
+/* Image Grid for Homepage */
+.image-grid-home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.image-grid-home .grid-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.image-grid-home .grid-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/* Hanover-Style Map Layout */
+.map-hanover-style {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.map-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.map-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+}
+
+.map-regions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.map-region-item {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.map-region-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateX(4px);
+}
+
+.map-region-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.map-region-status {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.map-container-hanover {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* Mobile responsive for map */
+@media (max-width: 900px) {
+  .map-hanover-style {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-grid-home {
+    grid-template-columns: 1fr;
+  }
 }
