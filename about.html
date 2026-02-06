@@ -76,8 +76,7 @@
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--solid" href="./contact.html">Contact us</a>
-            <a class="btn btn--ghost" href="./services.html">Explore services</a>
+            <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
           </div>
         </div>
       </div>
@@ -349,6 +348,16 @@
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) {
       yearEl.textContent = String(new Date().getFullYear());
+    }
+
+    // Dropdown menu
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
     }
   </script>
 </body>
