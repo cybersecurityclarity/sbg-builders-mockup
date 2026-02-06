@@ -1,3 +1,6 @@
+/* Google Fonts - Montserrat and Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
 :root {
   --bg: #0b0c0f;
   --bg2: #10121a;
@@ -22,8 +25,9 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Avenir LT Pro", "Avenir Next", Avenir, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -195,6 +199,13 @@ img {
   min-width: max-content;
 }
 
+.nav__brand-logo {
+  display: block;
+  height: 60px;
+  width: auto;
+  filter: invert(1);
+}
+
 .nav__logo {
   display: inline-flex;
   align-items: center;
@@ -233,7 +244,7 @@ img {
 
 .nav__menu {
   display: flex;
-  gap: 18px;
+  gap: 28px;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -243,6 +254,7 @@ img {
 .nav__menu a {
   color: var(--muted);
   font-weight: 600;
+  font-size: 16px;
   transition: color 0.2s ease;
   font-size: 15px;
 }
@@ -364,13 +376,33 @@ img {
 
 .hero__bg--mountain {
   background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
     url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90");
   background-size: cover;
   background-position: center;
   filter: grayscale(100%) contrast(1.1);
-  opacity: 0.85;
+  opacity: 1;
   animation: none;
+}
+
+.hero__bg--about {
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=90");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(1.1);
+  opacity: 1;
+}
+
+.hero__bg--projects {
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=90");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(1.1);
+  opacity: 1;
 }
 
 @keyframes slowZoom {
@@ -1726,4 +1758,174 @@ img {
     border: none;
     background: rgba(255, 255, 255, 0.02);
   }
+}
+/* Typography Updates - Montserrat for headers, Open Sans for body */
+
+/* Hero Titles - Montserrat Extra Bold - 72-80px */
+.hero__content h1,
+.hero__headline-large {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 80px;
+  letter-spacing: -0.02em;
+}
+
+/* Sub-Headers - Montserrat Bold - 42-48px */
+h2,
+.section__head h2,
+.sbg-pillar__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+/* Section Titles - Montserrat Bold - 56px */
+.hero--page h1,
+.services-hero__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+}
+
+/* Service/Card Titles - Montserrat Semi-Bold - 24px */
+h3,
+.card__title,
+.service-detailed__title,
+.tile h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* Navigation - Montserrat Medium - 15px */
+.nav__menu a,
+.nav__wordmark {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* CTA Buttons - Montserrat Semi-Bold - 18px */
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Body Text - Open Sans Regular - 18px */
+p,
+.lead,
+.hero__tagline-large,
+.cta__tagline,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Hero Tagline - specific */
+.hero__tagline-large {
+  font-size: 24px;
+}
+
+/* CTA Headlines */
+.cta__headline,
+.cta h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 56px;
+}
+
+/* Footer - Open Sans Regular - 14px */
+.footer__tagline,
+.footer__address,
+.footer__contact,
+.footer__links a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
+/* Placeholder Section */
+.placeholder-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+}
+
+.placeholder-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.placeholder-content p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* S.B.G. Pillars - Stacked Vertically */
+.sbg-pillars-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sbg-pillar-vertical {
+  padding: 48px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sbg-pillar-vertical:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.sbg-pillar__icon-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  font-size: 56px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.sbg-pillar__title-large {
+  font-size: 42px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+}
+
+.sbg-pillar-vertical .btn {
+  margin-top: 24px;
 }
