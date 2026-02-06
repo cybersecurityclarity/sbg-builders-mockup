@@ -45,9 +45,9 @@
 
         <ul id="nav-menu" class="nav__menu">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
           <li><a href="./services.html">Services</a></li>
           <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./about.html">About</a></li>
           <li class="nav__menu-dropdown">
             <a href="#" class="nav__dropdown-toggle">Work With Us</a>
             <ul class="nav__dropdown">
@@ -289,6 +289,16 @@
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) {
       yearEl.textContent = String(new Date().getFullYear());
+    }
+
+    // Dropdown menu
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
     }
 
     // Form submission (placeholder)
