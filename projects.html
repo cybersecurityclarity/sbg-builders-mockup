@@ -6,7 +6,7 @@
   <title>Projects | SBG Builders</title>
   <meta name="description" content="View completed and ongoing projects by SBG Builders. Commercial construction across Southern California." />
 
-  <link rel="icon" href="./assets/img/logo.avif" type="image/avif" />
+  <link rel="icon" href="./assets/img/Icon - White.png" type="image/png" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <meta property="og:title" content="Projects | SBG Builders" />
@@ -47,6 +47,13 @@
           <li><a href="./about.html">About</a></li>
           <li><a href="./services.html">Services</a></li>
           <li><a href="./projects.html" aria-current="page">Projects</a></li>
+          <li class="nav__menu-dropdown">
+            <a href="#" class="nav__dropdown-toggle">Work With Us</a>
+            <ul class="nav__dropdown">
+              <li><a href="./careers.html">Careers</a></li>
+              <li><a href="./subcontractor-prequalification.html">Subcontractor Prequalification</a></li>
+            </ul>
+          </li>
           <li><a href="./contact.html" class="nav__cta">Contact</a></li>
         </ul>
       </div>
@@ -68,8 +75,7 @@
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--solid" href="./contact.html">Discuss your project</a>
-            <a class="btn btn--ghost" href="./services.html">Our services</a>
+            <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
           </div>
         </div>
       </div>
@@ -197,8 +203,7 @@
             realistic estimates, and a path forward.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--solid" href="./contact.html">Get in touch</a>
-            <a class="btn btn--ghost" href="./services.html">View services</a>
+            <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
           </div>
         </div>
       </div>
@@ -257,6 +262,13 @@
             <li><a href="./about.html">About</a></li>
             <li><a href="./services.html">Services</a></li>
             <li><a href="./projects.html">Projects</a></li>
+          <li class="nav__menu-dropdown">
+            <a href="#" class="nav__dropdown-toggle">Work With Us</a>
+            <ul class="nav__dropdown">
+              <li><a href="./careers.html">Careers</a></li>
+              <li><a href="./subcontractor-prequalification.html">Subcontractor Prequalification</a></li>
+            </ul>
+          </li>
             <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
@@ -309,6 +321,16 @@
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) {
       yearEl.textContent = String(new Date().getFullYear());
+    }
+
+    // Dropdown menu
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
     }
   </script>
 </body>
