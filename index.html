@@ -6,7 +6,7 @@
   <title>SBG Builders | Commercial Construction in Southern California</title>
   <meta name="description" content="SBG Builders is a commercial general contractor in San Clemente, CA. Precise, predictable projects delivered with integrity." />
 
-  <link rel="icon" href="./assets/img/logo.avif" type="image/avif" />
+  <link rel="icon" href="./assets/img/Icon - White.png" type="image/png" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <meta property="og:title" content="SBG Builders" />
@@ -68,12 +68,8 @@
       <div class="container">
         <div class="hero__inner">
           <div class="hero__content">
-            <p class="kicker">Commercial General Contractor • San Clemente, CA</p>
-            <h1>Precise, predictable commercial construction.</h1>
-            <p class="lead">
-              SBG Builders delivers disciplined planning, transparent communication, and a right-the-first-time mindset.
-              We solve challenges early, own outcomes, and protect your priorities from precon through closeout.
-            </p>
+            <h1 class="hero__headline-large">SYSTEMS. BALANCE. GROWTH.</h1>
+            <p class="hero__tagline-large">Let's Build Something Better — Together.</p>
 
             <div class="hero__actions">
               <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
@@ -310,6 +306,16 @@
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) {
       yearEl.textContent = String(new Date().getFullYear());
+    }
+
+    // Dropdown menu
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
     }
   </script>
 </body>
