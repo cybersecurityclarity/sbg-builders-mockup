@@ -241,19 +241,8 @@
         <!-- Brand Column -->
         <div class="footer__col footer__col--brand">
           <a class="nav__brand" href="./index.html" aria-label="SBG Builders home">
-            <div class="nav__logo nav__logo--icon">
-              <img
-                class="nav__logoImg"
-                src="./assets/img/Icon - White.png"
-                alt="SBG Builders logo"
-                width="48"
-                height="48"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <span class="nav__wordmark">SBG Builders</span>
-          </a>
+          <img class="nav__brand-logo" src="./assets/img/Primary - Black.png" alt="SBG Builders" width="180" height="60" loading="eager" decoding="async" />
+        </a>
           <p class="footer__tagline">Commercial construction partner for owners and property teams across Southern California.</p>
           
           <div class="footer__social">
@@ -302,18 +291,7 @@
     </div>
   </footer>
 
-  <!-- Cookie Banner -->
-  <div class="cookie" id="cookieBanner">
-    <div class="cookie__inner glass">
-      <p class="cookie__text">This site uses cookies to improve your experience. By continuing, you agree to our privacy policy.</p>
-      <div class="cookie__actions">
-        <button class="btn btn--solid" onclick="acceptCookies()">Accept</button>
-        <button class="btn btn--ghost" onclick="acceptCookies()">Decline</button>
-      </div>
-    </div>
-  </div>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Nav scroll effect
     const nav = document.querySelector('.nav');
     const navToggle = document.querySelector('.nav__toggle');
@@ -344,16 +322,6 @@
     }, { threshold: 0.1 });
 
     reveals.forEach(el => revealObserver.observe(el));
-
-    // Cookie banner
-    function acceptCookies() {
-      document.getElementById('cookieBanner').style.display = 'none';
-      localStorage.setItem('cookiesAccepted', 'true');
-    }
-
-    if (!localStorage.getItem('cookiesAccepted')) {
-      document.getElementById('cookieBanner').classList.add('is-on');
-    }
 
     // Year
     const yearEl = document.getElementById('year');
