@@ -6,7 +6,7 @@
   <title>SBG Builders | Commercial Construction in Southern California</title>
   <meta name="description" content="SBG Builders is a commercial general contractor in San Clemente, CA. Precise, predictable projects delivered with integrity." />
 
-  <link rel="icon" href="./assets/img/Mountains - Black.png" type="image/png" />
+  <link rel="icon" href="./assets/img/Mountains-Black.png" type="image/png" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <meta property="og:title" content="SBG Builders" />
@@ -70,7 +70,7 @@
 
             <div class="hero__actions">
               <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
-              <a class="btn btn--ghost" href="/cdn-cgi/l/email-protection#01686f676e417263662c6374686d656473722f626e6c">Email Us</a>
+              <a class="btn btn--ghost" href="mailto:info@sbg-builders.com">Email Us</a>
             </div>
           </div>
 
@@ -226,7 +226,7 @@
           </p>
           <div class="hero__actions">
             <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
-            <a class="btn btn--ghost" href="/cdn-cgi/l/email-protection#e881868e87a89b8a8fc58a9d81848c8d9a9bc68b8785">Email Us</a>
+            <a class="btn btn--ghost" href="mailto:info@sbg-builders.com">Email Us</a>
           </div>
           <p class="note">Mock site for client review. Imagery is placeholder for layout and tone.</p>
         </div>
@@ -241,8 +241,19 @@
         <!-- Brand Column -->
         <div class="footer__col footer__col--brand">
           <a class="nav__brand" href="./index.html" aria-label="SBG Builders home">
-          <img class="nav__brand-logo" src="./assets/img/Primary - Black.png" alt="SBG Builders" width="180" height="60" loading="eager" decoding="async" />
-        </a>
+            <div class="nav__logo nav__logo--icon">
+              <img
+                class="nav__logoImg"
+                src="./assets/img/Icon - White.png"
+                alt="SBG Builders logo"
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="nav__wordmark">SBG Builders</span>
+          </a>
           <p class="footer__tagline">Commercial construction partner for owners and property teams across Southern California.</p>
           
           <div class="footer__social">
@@ -263,7 +274,7 @@
           </address>
           <p class="footer__contact">
             <a href="tel:+19492888708">949-288-8708</a><br>
-            <a href="/cdn-cgi/l/email-protection#20494e464f605342470d4255494c444552530e434f4d"><span class="__cf_email__" data-cfemail="cea7a0a8a18ebdaca9e3acbba7a2aaabbcbde0ada1a3">[email&#160;protected]</span></a>
+            <a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a>
           </p>
         </div>
 
@@ -290,6 +301,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie" id="cookieBanner">
+    <div class="cookie__inner glass">
+      <p class="cookie__text">This site uses cookies to improve your experience. By continuing, you agree to our privacy policy.</p>
+      <div class="cookie__actions">
+        <button class="btn btn--solid" onclick="acceptCookies()">Accept</button>
+        <button class="btn btn--ghost" onclick="acceptCookies()">Decline</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     // Nav scroll effect
@@ -323,6 +345,16 @@
 
     reveals.forEach(el => revealObserver.observe(el));
 
+    // Cookie banner
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    }
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookieBanner').classList.add('is-on');
+    }
+
     // Year
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) {
@@ -330,4 +362,14 @@
     }
 
     // Dropdown menu
-    const
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
+    }
+  </script>
+</body>
+</html>
