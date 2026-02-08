@@ -6,12 +6,12 @@
   <title>Services | SBG Builders</title>
   <meta name="description" content="Construction services for owners, tenants, and project partners. Comprehensive preconstruction through closeout services." />
 
-  <link rel="icon" href="./assets/img/Mountains - Black.png" type="image/png" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <meta property="og:title" content="Services | SBG Builders" />
   <meta property="og:description" content="Construction Services for Owners, Tenants & Project Partners" />
   <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="./assets/img/Mountains-Black.png" />
 </head>
 
 <body>
@@ -206,7 +206,7 @@
           <p class="cta__tagline">Let's Build Something Better — Together.</p>
           <div class="hero__actions">
             <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
-            <a class="btn btn--ghost" href="/cdn-cgi/l/email-protection#147d7a727b546776733976617d78707166673a777b79">Email Us</a>
+            <a class="btn btn--ghost" href="mailto:info@sbg-builders.com">Email Us</a>
           </div>
         </div>
       </div>
@@ -242,7 +242,7 @@
           </address>
           <p class="footer__contact">
             <a href="tel:+19492888708">949-288-8708</a><br>
-            <a href="/cdn-cgi/l/email-protection#5e373038311e2d3c39733c2b37323a3b2c2d703d3133"><span class="__cf_email__" data-cfemail="dbb2b5bdb49ba8b9bcf6b9aeb2b7bfbea9a8f5b8b4b6">[email&#160;protected]</span></a>
+            <a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a>
           </p>
         </div>
 
@@ -270,7 +270,7 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Nav scroll effect
     const nav = document.querySelector('.nav');
     const navToggle = document.querySelector('.nav__toggle');
@@ -309,4 +309,14 @@
     }
 
     // Dropdown menu
-    const dropdownToggle = document.querySelector('.n
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
+    }
+  </script>
+</body>
+</html>
