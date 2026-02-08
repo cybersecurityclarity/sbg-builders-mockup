@@ -107,6 +107,10 @@ img {
   padding: 48px 0;
 }
 
+.section--extra-tight {
+  padding: 24px 0;
+}
+
 .section--alt {
   background: linear-gradient(180deg, var(--bg2), var(--bg));
 }
@@ -723,10 +727,11 @@ img {
 }
 
 .cta h2 {
-  margin: 0 0 10px;
+  margin: 0 auto 10px;
   font-size: 34px;
   font-weight: 800;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .cta p {
@@ -747,6 +752,8 @@ img {
 }
 
 .sbg-pillar {
+  display: flex;
+  flex-direction: column;
   padding: 32px 24px;
   text-align: center;
   background: rgba(255, 255, 255, 0.04);
@@ -1222,6 +1229,10 @@ img {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.callout .hero__actions {
+  justify-content: center;
 }
 
 .callout h3 {
@@ -1940,7 +1951,8 @@ body {
 }
 
 .sbg-pillar .btn {
-  margin-top: 20px;
+  margin-top: auto;
+  padding-top: 20px;
 }
 
 
