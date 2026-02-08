@@ -6,7 +6,7 @@
   <title>About | SBG Builders</title>
   <meta name="description" content="SBG Builders is a commercial general contractor based in San Clemente, California, delivering precise, predictable projects with integrity." />
 
-  <link rel="icon" href="./assets/img/Mountains - Black.png" type="image/png" />
+  <link rel="icon" href="./assets/img/Mountains-Black.png" type="image/png" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <meta property="og:title" content="About | SBG Builders" />
@@ -67,7 +67,7 @@
 
           <div class="hero__actions">
             <a class="btn btn--solid" href="https://calendly.com/egoldtrap-sbg-builders" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
-            <a class="btn btn--ghost" href="/cdn-cgi/l/email-protection#0e676068614e7d6c69236c7b67626a6b7c7d206d6163">Email Us</a>
+            <a class="btn btn--ghost" href="mailto:info@sbg-builders.com">Email Us</a>
           </div>
         </div>
       </div>
@@ -203,12 +203,12 @@
           </article>
         </div>
 
-        <div class="callout glass reveal" style="margin-top: 40px;">
+        <div class="callout glass reveal" style="margin-top: 40px; text-align: center;">
           <h3>Let's build something better, together.</h3>
           <p class="muted">
             If you have a project with real constraints and high expectations, we would like to learn the goals and help map a clear path forward.
           </p>
-          <div class="hero__actions">
+          <div class="hero__actions" style="justify-content: center;">
             <a class="btn btn--solid" href="./contact.html">Start a conversation</a>
             <a class="btn btn--ghost" href="./projects.html">See project work</a>
           </div>
@@ -257,7 +257,7 @@
           </address>
           <p class="footer__contact">
             <a href="tel:+19492888708">949-288-8708</a><br>
-            <a href="/cdn-cgi/l/email-protection#98f1f6fef7d8ebfaffb5faedf1f4fcfdeaebb6fbf7f5"><span class="__cf_email__" data-cfemail="7f161119103f0c1d18521d0a16131b1a0d0c511c1012">[email&#160;protected]</span></a>
+            <a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a>
           </p>
         </div>
 
@@ -292,7 +292,7 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Nav scroll effect
     const nav = document.querySelector('.nav');
     const navToggle = document.querySelector('.nav__toggle');
@@ -331,4 +331,14 @@
     }
 
     // Dropdown menu
-    const dropdownToggle = document.querySelector('.n
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
+    }
+  </script>
+</body>
+</html>
