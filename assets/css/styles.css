@@ -2053,3 +2053,38 @@ body {
 .contact-layout {
   margin-top: 0;
 }
+
+
+/* Force center CTA section on all pages */
+.section--cta .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section--cta .cta {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section--cta .cta__headline,
+.section--cta .cta h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section--cta .cta p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section--cta .hero__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
