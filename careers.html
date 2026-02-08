@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Careers | SBG Builders</title>
   <meta name="description" content="Join the SBG Builders team. Career opportunities in commercial construction." />
-  <link rel="icon" href="./assets/img/Mountains - Black.png" type="image/png" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
@@ -73,7 +72,7 @@
         <div class="footer__col">
           <h3 class="footer__title">Headquarters</h3>
           <address class="footer__address">100 Avenida La Pata 228<br>San Clemente, CA 92673</address>
-          <p class="footer__contact"><a href="tel:+19492888708">949-288-8708</a><br><a href="/cdn-cgi/l/email-protection#a1c8cfc7cee1d2c3c68cc3d4c8cdc5c4d3d28fc2cecc"><span class="__cf_email__" data-cfemail="f990979f96b98a9b9ed49b8c90959d9c8b8ad79a9694">[email&#160;protected]</span></a></p>
+          <p class="footer__contact"><a href="tel:+19492888708">949-288-8708</a><br><a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a></p>
         </div>
         <div class="footer__col">
           <h3 class="footer__title">Quick Links</h3>
@@ -95,7 +94,7 @@
       </div>
     </div>
   </footer>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const navToggle = document.querySelector('.nav__toggle');
     const navMenu = document.querySelector('.nav__menu');
     navToggle?.addEventListener('click', () => {
@@ -104,4 +103,13 @@
     });
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) yearEl.textContent = String(new Date().getFullYear());
-    const dropdownToggle = document.querySelector('.nav__dropdown-
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdownToggle.closest('.nav__menu-dropdown').classList.toggle('is-open');
+      });
+    }
+  </script>
+</body>
+</html>
