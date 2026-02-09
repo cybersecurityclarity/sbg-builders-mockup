@@ -141,62 +141,226 @@
       </div>
     </section>
 
-    <!-- Interactive Map Section - Hanover Style -->
+    <!-- Interactive Map Section - Mapbox Style -->
     <section class="section section--alt">
-      <div class="container">
-        <div class="section__head">
+      <div class="container-fluid">
+        <div class="section__head" style="text-align: center; max-width: 1140px; margin: 0 auto 40px;">
           <h2>Where We Work</h2>
           <p class="muted">Licensed and actively building across Southern California</p>
         </div>
 
-        <div class="map-hanover-style reveal">
-          <div class="map-sidebar">
-            <div class="map-legend">
-              <div class="map-legend__item">
-                <span class="map-legend__dot map-legend__dot--licensed"></span>
-                <span class="map-legend__label">Licensed Counties</span>
-              </div>
-              <div class="map-legend__item">
-                <span class="map-legend__dot map-legend__dot--active"></span>
-                <span class="map-legend__label">Active Projects</span>
+        <div class="mapbox-container">
+          <!-- Left Sidebar with Filters -->
+          <div class="mapbox-sidebar">
+            <div class="mapbox-filter-group">
+              <h3 class="mapbox-filter-title">Property Type</h3>
+              <div class="mapbox-filter-options">
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="commercial">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Commercial <span class="mapbox-count">8</span></span>
+                </label>
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="industrial">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Industrial <span class="mapbox-count">3</span></span>
+                </label>
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="retail">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Retail <span class="mapbox-count">5</span></span>
+                </label>
               </div>
             </div>
 
-            <div class="map-regions-list">
-              <div class="map-region-item">
-                <h4>Orange County</h4>
-                <p class="map-region-status">Licensed • Active Projects: 2</p>
+            <div class="mapbox-filter-group">
+              <h3 class="mapbox-filter-title">Service Area</h3>
+              <div class="mapbox-filter-options">
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="orange">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Orange County <span class="mapbox-count">2</span></span>
+                </label>
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="sandiego">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">San Diego County <span class="mapbox-count">1</span></span>
+                </label>
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="losangeles">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Los Angeles County <span class="mapbox-count">0</span></span>
+                </label>
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="riverside">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Riverside County <span class="mapbox-count">0</span></span>
+                </label>
               </div>
-              <div class="map-region-item">
-                <h4>San Diego County</h4>
-                <p class="map-region-status">Licensed • Active Projects: 1</p>
+            </div>
+
+            <div class="mapbox-legend">
+              <div class="mapbox-legend-item">
+                <span class="mapbox-dot mapbox-dot--licensed"></span>
+                <span class="mapbox-legend-label">Licensed Counties</span>
               </div>
-              <div class="map-region-item">
-                <h4>Los Angeles County</h4>
-                <p class="map-region-status">Licensed • Coming Soon</p>
-              </div>
-              <div class="map-region-item">
-                <h4>Riverside County</h4>
-                <p class="map-region-status">Licensed • Coming Soon</p>
+              <div class="mapbox-legend-item">
+                <span class="mapbox-dot mapbox-dot--active"></span>
+                <span class="mapbox-legend-label">Active Projects</span>
               </div>
             </div>
           </div>
 
-          <div class="map-container-hanover">
-            <iframe 
-              src="https://www.google.com/maps/d/u/3/embed?mid=17iq1YVnwGuTdeWUuyhb6lyK66OcUEUE&ehbc=2E312F" 
-              width="100%" 
-              height="500" 
-              style="border:0; border-radius: 8px;"
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="SBG Builders Service Area Map">
-            </iframe>
+          <!-- Map Container -->
+          <div class="mapbox-map-wrapper">
+            <div id="map" class="mapbox-map"></div>
+            <div class="mapbox-results">
+              <span class="mapbox-results-count">3 results found</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    
+    <script>
+      // Initialize Mapbox map
+      mapboxgl.accessToken = 'pk.eyJ1IjoiYWVyYWtvdG9tYWxhbGEiLCJhIjoiY21sZWh4N3RnMWZpbzNocjQycG5zaTBjZyJ9.ZMQ7VHj8ESEwh8KXj4lmZQ';
+      
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v11', // Light gray style like Hanover
+        center: [-117.6, 33.5], // Southern California
+        zoom: 8,
+        scrollZoom: false
+      });
+
+      // Add navigation controls
+      map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+      // Define project locations
+      const projects = [
+        {
+          type: 'Feature',
+          properties: {
+            name: 'Orange County Project 1',
+            county: 'Orange County',
+            projectType: 'Commercial',
+            status: 'Active',
+            filter: ['commercial', 'orange']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.8311, 33.6846] // Newport Beach area
+          }
+        },
+        {
+          type: 'Feature',
+          properties: {
+            name: 'Orange County Project 2',
+            county: 'Orange County',
+            projectType: 'Retail',
+            status: 'Active',
+            filter: ['retail', 'orange']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.9145, 33.7455] // Irvine area
+          }
+        },
+        {
+          type: 'Feature',
+          properties: {
+            name: 'San Diego Project',
+            county: 'San Diego County',
+            projectType: 'Industrial',
+            status: 'Active',
+            filter: ['industrial', 'sandiego']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.1611, 32.7157] // San Diego
+          }
+        }
+      ];
+
+      // Add markers when map loads
+      map.on('load', () => {
+        projects.forEach(project => {
+          // Create marker element
+          const el = document.createElement('div');
+          el.className = 'mapbox-marker mapbox-marker--active';
+          el.style.width = '20px';
+          el.style.height = '20px';
+          el.style.borderRadius = '50%';
+          el.style.backgroundColor = 'rgba(50, 205, 50, 0.8)';
+          el.style.border = '2px solid white';
+          el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
+          el.style.cursor = 'pointer';
+
+          // Add marker to map
+          new mapboxgl.Marker(el)
+            .setLngLat(project.geometry.coordinates)
+            .setPopup(
+              new mapboxgl.Popup({ offset: 25 })
+                .setHTML(`
+                  <div style="padding: 10px;">
+                    <h4 style="margin: 0 0 8px; font-size: 14px; font-weight: 700;">${project.properties.name}</h4>
+                    <p style="margin: 0; font-size: 12px; color: #666;">${project.properties.projectType}</p>
+                    <p style="margin: 4px 0 0; font-size: 12px; color: #666;">${project.properties.county}</p>
+                  </div>
+                `)
+            )
+            .addTo(map);
+        });
+
+        // Add licensed county boundaries (simplified)
+        map.addSource('counties', {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: [
+              // Orange County outline (simplified)
+              {
+                type: 'Feature',
+                properties: { name: 'Orange County' },
+                geometry: {
+                  type: 'Polygon',
+                  coordinates: [[
+                    [-118.1, 33.9],
+                    [-117.4, 33.9],
+                    [-117.4, 33.3],
+                    [-118.1, 33.3],
+                    [-118.1, 33.9]
+                  ]]
+                }
+              }
+            ]
+          }
+        });
+
+        map.addLayer({
+          id: 'county-fills',
+          type: 'fill',
+          source: 'counties',
+          paint: {
+            'fill-color': 'rgba(100, 149, 237, 0.1)',
+            'fill-outline-color': 'rgba(100, 149, 237, 0.3)'
+          }
+        });
+      });
+
+      // Filter functionality
+      document.querySelectorAll('.mapbox-checkbox input').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          // Filter logic would go here
+          console.log('Filter changed:', checkbox.dataset.filter);
+        });
+      });
+    </script>
 
     <!-- CTA -->
     <section class="section section--cta">
