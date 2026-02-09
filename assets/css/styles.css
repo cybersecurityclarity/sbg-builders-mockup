@@ -2098,18 +2098,16 @@ body {
    MAPBOX MAP IMPLEMENTATION - HANOVER STYLE
    ========================================== */
 
-.container-fluid {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
 .mapbox-container {
   display: flex;
   width: 100%;
-  height: 600px;
+  height: 500px;
   background: #1a1a1a;
   position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 /* Left Sidebar with Filters */
@@ -2234,6 +2232,12 @@ body {
   background: rgba(50, 205, 50, 0.8);
   border: 2px solid rgba(50, 205, 50, 1);
   box-shadow: 0 0 8px rgba(50, 205, 50, 0.4);
+}
+
+.mapbox-dot--completed {
+  background: rgba(100, 149, 237, 0.8);
+  border: 2px solid rgba(100, 149, 237, 1);
+  box-shadow: 0 0 8px rgba(100, 149, 237, 0.4);
 }
 
 .mapbox-legend-label {
