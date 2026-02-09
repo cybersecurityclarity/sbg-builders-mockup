@@ -1,6 +1,9 @@
 /* Google Fonts - Montserrat and Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+/* Adobe Fonts - FM Bolyar Sans Pro */
+@import url('https://use.typekit.net/TYPEKIT_ID.css');
+
 :root {
   --bg: #0b0c0f;
   --bg2: #10121a;
@@ -1769,14 +1772,15 @@ img {
 }
 /* Typography Updates - Montserrat for headers, Open Sans for body */
 
-/* Hero Titles - Montserrat Black - 80px (Gotham Black equivalent) */
+/* Hero Titles - FM Bolyar Sans Pro 800 for SYSTEMS. BALANCE. GROWTH. */
 .hero__content h1,
 .hero__headline-large {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  font-family: "fm-bolyar-sans-pro", "Montserrat", sans-serif;
+  font-weight: 800;
   font-size: 80px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  font-style: normal;
 }
 
 /* Sub-Headers - Montserrat Bold - 42-48px */
@@ -2087,4 +2091,243 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+
+/* ==========================================
+   MAPBOX MAP IMPLEMENTATION - HANOVER STYLE
+   ========================================== */
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.mapbox-container {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  background: #1a1a1a;
+  position: relative;
+}
+
+/* Left Sidebar with Filters */
+.mapbox-sidebar {
+  width: 280px;
+  background: #0d0d0d;
+  padding: 30px 20px;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mapbox-filter-group {
+  margin-bottom: 30px;
+}
+
+.mapbox-filter-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mapbox-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Custom Checkbox Styling */
+.mapbox-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 0;
+  user-select: none;
+}
+
+.mapbox-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mapbox-checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  background: transparent;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.mapbox-checkbox input:checked ~ .mapbox-checkbox-custom {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.mapbox-checkbox input:checked ~ .mapbox-checkbox-custom::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--black);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.mapbox-label {
+  font-size: 14px;
+  color: var(--text);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.mapbox-count {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* Legend */
+.mapbox-legend {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mapbox-legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.mapbox-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.mapbox-dot--licensed {
+  background: rgba(100, 149, 237, 0.8);
+  border: 2px solid rgba(100, 149, 237, 1);
+}
+
+.mapbox-dot--active {
+  background: rgba(50, 205, 50, 0.8);
+  border: 2px solid rgba(50, 205, 50, 1);
+  box-shadow: 0 0 8px rgba(50, 205, 50, 0.4);
+}
+
+.mapbox-legend-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Map Container */
+.mapbox-map-wrapper {
+  flex: 1;
+  position: relative;
+  background: #e8e8e8;
+}
+
+.mapbox-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Results Counter */
+.mapbox-results {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.mapbox-results-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Mapbox Markers */
+.mapbox-marker {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.mapbox-marker:hover {
+  transform: scale(1.2);
+}
+
+/* Mapbox Popup Overrides */
+.mapboxgl-popup-content {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 20px;
+  padding: 4px 8px;
+  color: #666;
+}
+
+.mapboxgl-popup-close-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mapbox-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .mapbox-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 400px;
+  }
+  
+  .mapbox-map-wrapper {
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mapbox-sidebar {
+    padding: 20px 15px;
+  }
+  
+  .mapbox-map-wrapper {
+    height: 400px;
+  }
 }
