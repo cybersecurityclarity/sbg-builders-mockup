@@ -143,8 +143,8 @@
 
     <!-- Interactive Map Section - Mapbox Style -->
     <section class="section section--alt">
-      <div class="container-fluid">
-        <div class="section__head" style="text-align: center; max-width: 1140px; margin: 0 auto 40px;">
+      <div class="container">
+        <div class="section__head" style="text-align: center; margin: 0 auto 40px;">
           <h2>Where We Work</h2>
           <p class="muted">Licensed and actively building across Southern California</p>
         </div>
@@ -174,7 +174,23 @@
             </div>
 
             <div class="mapbox-filter-group">
-              <h3 class="mapbox-filter-title">Service Area</h3>
+              <h3 class="mapbox-filter-title">Project Status</h3>
+              <div class="mapbox-filter-options">
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" checked data-filter="active">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Active Projects <span class="mapbox-count">3</span></span>
+                </label>
+                <label class="mapbox-checkbox">
+                  <input type="checkbox" data-filter="completed">
+                  <span class="mapbox-checkbox-custom"></span>
+                  <span class="mapbox-label">Completed Projects <span class="mapbox-count">6</span></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="mapbox-filter-group">
+              <h3 class="mapbox-filter-title">Licensed In</h3>
               <div class="mapbox-filter-options">
                 <label class="mapbox-checkbox">
                   <input type="checkbox" checked data-filter="orange">
@@ -207,6 +223,10 @@
               <div class="mapbox-legend-item">
                 <span class="mapbox-dot mapbox-dot--active"></span>
                 <span class="mapbox-legend-label">Active Projects</span>
+              </div>
+              <div class="mapbox-legend-item">
+                <span class="mapbox-dot mapbox-dot--completed"></span>
+                <span class="mapbox-legend-label">Completed Projects</span>
               </div>
             </div>
           </div>
@@ -243,14 +263,17 @@
 
       // Define project locations
       const projects = [
+        // Active Projects
         {
           type: 'Feature',
           properties: {
-            name: 'Orange County Project 1',
+            name: 'Newport Corporate Center',
             county: 'Orange County',
             projectType: 'Commercial',
             status: 'Active',
-            filter: ['commercial', 'orange']
+            size: '45,000 SF',
+            completion: 'Q3 2026',
+            filter: ['commercial', 'orange', 'active']
           },
           geometry: {
             type: 'Point',
@@ -260,11 +283,13 @@
         {
           type: 'Feature',
           properties: {
-            name: 'Orange County Project 2',
+            name: 'Irvine Spectrum Plaza',
             county: 'Orange County',
             projectType: 'Retail',
             status: 'Active',
-            filter: ['retail', 'orange']
+            size: '65,000 SF',
+            completion: 'Q4 2026',
+            filter: ['retail', 'orange', 'active']
           },
           geometry: {
             type: 'Point',
@@ -274,47 +299,171 @@
         {
           type: 'Feature',
           properties: {
-            name: 'San Diego Project',
+            name: 'San Diego Distribution Hub',
             county: 'San Diego County',
             projectType: 'Industrial',
             status: 'Active',
-            filter: ['industrial', 'sandiego']
+            size: '85,000 SF',
+            completion: 'Q2 2026',
+            filter: ['industrial', 'sandiego', 'active']
           },
           geometry: {
             type: 'Point',
             coordinates: [-117.1611, 32.7157] // San Diego
           }
+        },
+        // Completed Projects
+        {
+          type: 'Feature',
+          properties: {
+            name: 'San Clemente Medical Plaza',
+            county: 'Orange County',
+            projectType: 'Commercial',
+            status: 'Completed',
+            size: '32,000 SF',
+            completion: 'December 2025',
+            filter: ['commercial', 'orange', 'completed']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.6100, 33.4269] // San Clemente
+          }
+        },
+        {
+          type: 'Feature',
+          properties: {
+            name: 'Coastal Grill & Bar',
+            county: 'Orange County',
+            projectType: 'Retail',
+            status: 'Completed',
+            size: '8,500 SF',
+            completion: 'November 2025',
+            filter: ['retail', 'orange', 'completed']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.6981, 33.4672] // Dana Point
+          }
+        },
+        {
+          type: 'Feature',
+          properties: {
+            name: 'Tech Startup Office Suite',
+            county: 'Orange County',
+            projectType: 'Commercial',
+            status: 'Completed',
+            size: '15,000 SF',
+            completion: 'October 2025',
+            filter: ['commercial', 'orange', 'completed']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.9992, 33.6603] // Huntington Beach
+          }
+        },
+        {
+          type: 'Feature',
+          properties: {
+            name: 'Fashion Island Storefront',
+            county: 'Orange County',
+            projectType: 'Retail',
+            status: 'Completed',
+            size: '12,000 SF',
+            completion: 'September 2025',
+            filter: ['retail', 'orange', 'completed']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.8764, 33.6158] // Fashion Island
+          }
+        },
+        {
+          type: 'Feature',
+          properties: {
+            name: 'Executive Office Tower',
+            county: 'Orange County',
+            projectType: 'Commercial',
+            status: 'Completed',
+            size: '28,000 SF',
+            completion: 'August 2025',
+            filter: ['commercial', 'orange', 'completed']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.9181, 33.6409] // Costa Mesa
+          }
+        },
+        {
+          type: 'Feature',
+          properties: {
+            name: 'Logistics Center Phase 2',
+            county: 'Orange County',
+            projectType: 'Industrial',
+            status: 'Completed',
+            size: '95,000 SF',
+            completion: 'July 2025',
+            filter: ['industrial', 'orange', 'completed']
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [-117.6897, 33.6470] // Lake Forest
+          }
         }
       ];
 
       // Add markers when map loads
+      const allMarkers = [];
+      
       map.on('load', () => {
         projects.forEach(project => {
+          // Determine marker color based on status
+          const isActive = project.properties.status === 'Active';
+          const markerColor = isActive ? 'rgba(50, 205, 50, 0.9)' : 'rgba(100, 149, 237, 0.9)';
+          
           // Create marker element
           const el = document.createElement('div');
-          el.className = 'mapbox-marker mapbox-marker--active';
+          el.className = `mapbox-marker mapbox-marker--${isActive ? 'active' : 'completed'}`;
           el.style.width = '20px';
           el.style.height = '20px';
           el.style.borderRadius = '50%';
-          el.style.backgroundColor = 'rgba(50, 205, 50, 0.8)';
-          el.style.border = '2px solid white';
-          el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
+          el.style.backgroundColor = markerColor;
+          el.style.border = '3px solid white';
+          el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.4)';
           el.style.cursor = 'pointer';
+          el.style.transition = 'transform 0.2s ease';
 
           // Add marker to map
-          new mapboxgl.Marker(el)
+          const marker = new mapboxgl.Marker(el)
             .setLngLat(project.geometry.coordinates)
             .setPopup(
               new mapboxgl.Popup({ offset: 25 })
                 .setHTML(`
-                  <div style="padding: 10px;">
-                    <h4 style="margin: 0 0 8px; font-size: 14px; font-weight: 700;">${project.properties.name}</h4>
-                    <p style="margin: 0; font-size: 12px; color: #666;">${project.properties.projectType}</p>
-                    <p style="margin: 4px 0 0; font-size: 12px; color: #666;">${project.properties.county}</p>
+                  <div style="padding: 12px; min-width: 200px;">
+                    <div style="display: inline-block; padding: 3px 8px; background: ${isActive ? '#32cd32' : '#6495ed'}; color: white; border-radius: 4px; font-size: 11px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase;">
+                      ${project.properties.status}
+                    </div>
+                    <h4 style="margin: 0 0 8px; font-size: 15px; font-weight: 700; color: #000;">${project.properties.name}</h4>
+                    <p style="margin: 0 0 4px; font-size: 12px; color: #666;">
+                      <strong>Type:</strong> ${project.properties.projectType}
+                    </p>
+                    <p style="margin: 0 0 4px; font-size: 12px; color: #666;">
+                      <strong>Location:</strong> ${project.properties.county}
+                    </p>
+                    <p style="margin: 0 0 4px; font-size: 12px; color: #666;">
+                      <strong>Size:</strong> ${project.properties.size}
+                    </p>
+                    <p style="margin: 0; font-size: 12px; color: #666;">
+                      <strong>${isActive ? 'Est. Completion' : 'Completed'}:</strong> ${project.properties.completion}
+                    </p>
                   </div>
                 `)
             )
             .addTo(map);
+          
+          // Store marker with its project data
+          marker.projectData = project.properties;
+          marker.element = el;
+          allMarkers.push(marker);
         });
 
         // Add licensed county boundaries (simplified)
@@ -354,11 +503,35 @@
       });
 
       // Filter functionality
-      document.querySelectorAll('.mapbox-checkbox input').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-          // Filter logic would go here
-          console.log('Filter changed:', checkbox.dataset.filter);
+      function updateMarkers() {
+        const activeFilters = Array.from(
+          document.querySelectorAll('.mapbox-checkbox input:checked')
+        ).map(cb => cb.dataset.filter);
+        
+        let visibleCount = 0;
+        
+        allMarkers.forEach(marker => {
+          // Check if marker matches any active filter
+          const matchesFilter = marker.projectData.filter.some(f => 
+            activeFilters.includes(f)
+          );
+          
+          if (matchesFilter) {
+            marker.addTo(map);
+            visibleCount++;
+          } else {
+            marker.remove();
+          }
         });
+        
+        // Update results counter
+        document.querySelector('.mapbox-results-count').textContent = 
+          `${visibleCount} result${visibleCount !== 1 ? 's' : ''} found`;
+      }
+      
+      // Add event listeners to all checkboxes
+      document.querySelectorAll('.mapbox-checkbox input').forEach(checkbox => {
+        checkbox.addEventListener('change', updateMarkers);
       });
     </script>
 
