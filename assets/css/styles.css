@@ -2349,13 +2349,18 @@ body {
 
 
 /* Footer - Single Row with Legal Stacked on Right */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
+  margin: 0;
+}
+
 .footer__single-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 0 8px 0;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -2423,6 +2428,16 @@ body {
 
 .footer__linkedin-icon:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.footer__copyright-center {
+  text-align: center;
+  padding: 8px 0 16px 0;
+  font-size: 14px;
+  color: var(--muted);
+  font-family: "Open Sans", sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1200px) {
