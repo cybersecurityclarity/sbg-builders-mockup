@@ -2348,123 +2348,68 @@ body {
 
 
 
-/* Footer - Ultra Compact Horizontal Layout */
-.footer__compact {
-  padding: 20px 0;
+/* Footer - Single Row Full Width */
+.footer__single-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Row 1: Logo + Address + All Links on one line */
-.footer__row-1 {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
+  max-width: 1400px;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
-.footer__brand {
-  flex-shrink: 0;
-  margin-right: 8px;
+.footer__logo {
+  width: auto;
+  height: 50px;
+  margin-right: 20px;
 }
 
-.footer__text {
+.footer__single-row span,
+.footer__single-row a {
   font-size: 14px;
   color: var(--muted);
   font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
-.footer__separator {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.footer__row-1 a {
-  font-size: 14px;
-  color: var(--muted);
+.footer__single-row a {
   text-decoration: none;
   transition: color 0.2s ease;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
 }
 
-.footer__row-1 a:hover {
+.footer__single-row a:hover {
   color: var(--white);
 }
 
-/* Row 2: Phone + Email */
-.footer__row-2 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.footer__row-2 a {
-  font-size: 14px;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  font-family: "Open Sans", sans-serif;
-}
-
-.footer__row-2 a:hover {
-  color: var(--white);
-}
-
-/* Row 3: Copyright + Legal + LinkedIn */
-.footer__row-3 {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.footer__copyright {
-  font-size: 14px;
-  color: var(--muted);
-  font-family: "Open Sans", sans-serif;
-  margin-right: 8px;
-}
-
-.footer__row-3 a {
-  font-size: 14px;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-}
-
-.footer__row-3 a:hover {
-  color: var(--white);
-}
-
-.footer__linkedin {
+.footer__linkedin-icon {
   display: inline-flex;
   align-items: center;
   padding: 6px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
-  color: var(--muted);
-  transition: all 0.2s ease;
   margin-left: 4px;
 }
 
-.footer__linkedin:hover {
+.footer__linkedin-icon:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: var(--white);
 }
 
-/* Mobile responsive */
+@media (max-width: 1200px) {
+  .footer__single-row {
+    gap: 16px;
+  }
+}
+
 @media (max-width: 900px) {
-  .footer__row-1,
-  .footer__row-2,
-  .footer__row-3 {
-    flex-wrap: wrap;
+  .footer__single-row {
+    gap: 12px;
+    padding: 20px;
   }
   
-  .footer__brand {
+  .footer__logo {
     width: 100%;
     margin-bottom: 12px;
   }
