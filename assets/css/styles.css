@@ -577,7 +577,7 @@ img {
 }
 
 .card:hover .card__img {
-  filter: grayscale(0%);
+  filter: none;
   opacity: 1;
 }
 
@@ -614,7 +614,7 @@ img {
   background: #111;
   background-size: cover;
   background-position: center;
-  filter: grayscale(0%);
+  filter: none;
   opacity: 0.85;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
@@ -1272,13 +1272,13 @@ img {
   height: 200px;
   background-size: cover;
   background-position: center;
-  filter: grayscale(0%);
+  filter: none;
   opacity: 0.8;
   transition: all 0.3s ease;
 }
 
 .service-card:hover .service-card__img {
-  filter: grayscale(0%);
+  filter: none;
   opacity: 1;
 }
 
@@ -1383,13 +1383,13 @@ img {
   height: 240px;
   object-fit: cover;
   border-radius: var(--radius);
-  filter: grayscale(0%);
+  filter: none;
   opacity: 0.85;
   transition: all 0.3s ease;
 }
 
 .grid-img:hover {
-  filter: grayscale(0%);
+  filter: none;
   opacity: 1;
   transform: scale(1.02);
 }
@@ -2013,12 +2013,12 @@ body {
   height: 300px;
   object-fit: cover;
   border-radius: var(--radius);
-  filter: grayscale(0%);
+  filter: none;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .image-grid-home .grid-img:hover {
-  filter: grayscale(0%);
+  filter: none;
   transform: scale(1.02);
 }
 
