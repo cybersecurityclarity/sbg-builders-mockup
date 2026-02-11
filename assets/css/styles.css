@@ -2348,26 +2348,34 @@ body {
 
 
 
-/* Footer - Single Row Full Width */
+/* Footer - Single Row with Legal Stacked on Right */
 .footer__single-row {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 24px 0;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   max-width: 1400px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .footer__logo {
   width: auto;
-  height: 50px;
-  margin-right: 20px;
+  height: 70px;
+  flex-shrink: 0;
 }
 
-.footer__single-row span,
-.footer__single-row a {
+.footer__main-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.footer__main-content span,
+.footer__main-content a {
   font-size: 14px;
   color: var(--muted);
   font-family: "Open Sans", sans-serif;
@@ -2375,12 +2383,33 @@ body {
   white-space: nowrap;
 }
 
-.footer__single-row a {
+.footer__main-content a {
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.footer__single-row a:hover {
+.footer__main-content a:hover {
+  color: var(--white);
+}
+
+.footer__legal-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.footer__legal-stack a {
+  font-size: 14px;
+  color: var(--muted);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal-stack a:hover {
   color: var(--white);
 }
 
@@ -2390,7 +2419,6 @@ body {
   padding: 6px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
-  margin-left: 4px;
 }
 
 .footer__linkedin-icon:hover {
@@ -2398,20 +2426,20 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .footer__single-row {
-    gap: 16px;
+  .footer__main-content {
+    gap: 12px;
   }
 }
 
 @media (max-width: 900px) {
   .footer__single-row {
-    gap: 12px;
-    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
   
-  .footer__logo {
-    width: 100%;
-    margin-bottom: 12px;
+  .footer__legal-stack {
+    align-items: flex-start;
   }
 }
 
