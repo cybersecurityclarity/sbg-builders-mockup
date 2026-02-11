@@ -358,7 +358,7 @@ img {
   padding-top: 90px;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
 }
@@ -431,7 +431,7 @@ img {
   grid-template-columns: 1.35fr 0.65fr;
   gap: 28px;
   align-items: end;
-  padding: 56px 0;
+  padding: 40px 0;
   z-index: 1;
 }
 
@@ -1122,9 +1122,9 @@ img {
 
 /* Page Hero Variant */
 .hero--page {
-  min-height: 60vh;
+  min-height: 50vh;
   padding-top: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 .hero--page::after {
