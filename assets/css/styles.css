@@ -204,7 +204,7 @@ img {
 
 .nav__brand-logo {
   display: block;
-  height: 105px;
+  height: 80px;
   width: auto;
   filter: invert(1);
 }
@@ -2340,30 +2340,37 @@ body {
 
 /* Horizontal Footer Layout */
 .footer__horizontal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr 1fr 180px;
+  gap: 40px;
+  padding: 40px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  flex-wrap: wrap;
+  align-items: start;
 }
 
 .footer__brand {
   flex-shrink: 0;
 }
 
-.footer__contact-block {
+.footer__contact-block,
+.footer__links-block,
+.footer__legal-block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+}
+
+.footer__meta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer__contact-item {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
 }
 
 .footer__contact-item a {
@@ -2378,16 +2385,17 @@ body {
 
 .footer__nav {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer__nav a {
   font-size: 14px;
   color: var(--muted);
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   transition: color 0.2s ease;
 }
 
@@ -2416,6 +2424,14 @@ body {
 .footer__social-link {
   display: flex;
   align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease;
+}
+
+.footer__social-link:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .footer__divider {
@@ -2425,21 +2441,26 @@ body {
 .footer__copy {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Mobile responsive for horizontal footer */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .footer__horizontal {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__horizontal {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
   
   .footer__nav {
-    flex-wrap: wrap;
-  }
-  
-  .footer__meta {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
