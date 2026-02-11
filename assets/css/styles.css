@@ -2348,71 +2348,56 @@ body {
 
 
 
-/* Footer - Clean 3 Row Layout */
+/* Footer - Ultra Compact Horizontal Layout */
 .footer__compact {
-  padding: 30px 0;
+  padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Row 1: Logo + Headquarters */
+/* Row 1: Logo + Address + All Links on one line */
 .footer__row-1 {
   display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 24px;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
 .footer__brand {
   flex-shrink: 0;
+  margin-right: 8px;
 }
 
-.footer__hq {
-  flex: 1;
-}
-
-.footer__hq strong {
-  display: block;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.footer__hq p {
-  margin: 0;
+.footer__text {
   font-size: 14px;
   color: var(--muted);
-  line-height: 1.8;
   font-family: "Open Sans", sans-serif;
 }
 
-.footer__hq a {
+.footer__separator {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer__row-1 a {
+  font-size: 14px;
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s ease;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 
-.footer__hq a:hover {
+.footer__row-1 a:hover {
   color: var(--white);
 }
 
-/* Row 2: Quick Links */
+/* Row 2: Phone + Email */
 .footer__row-2 {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 16px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 16px;
-}
-
-.footer__row-2 strong {
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .footer__row-2 a {
@@ -2427,38 +2412,43 @@ body {
   color: var(--white);
 }
 
-/* Row 3: Legal + LinkedIn + Copyright */
+/* Row 3: Copyright + Legal + LinkedIn */
 .footer__row-3 {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.footer__legal {
-  display: flex;
-  gap: 24px;
+.footer__copyright {
+  font-size: 14px;
+  color: var(--muted);
+  font-family: "Open Sans", sans-serif;
+  margin-right: 8px;
 }
 
-.footer__legal a {
+.footer__row-3 a {
   font-size: 14px;
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s ease;
   font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 
-.footer__legal a:hover {
+.footer__row-3 a:hover {
   color: var(--white);
 }
 
 .footer__linkedin {
   display: inline-flex;
   align-items: center;
-  padding: 8px;
+  padding: 6px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
   color: var(--muted);
   transition: all 0.2s ease;
+  margin-left: 4px;
 }
 
 .footer__linkedin:hover {
@@ -2466,32 +2456,17 @@ body {
   color: var(--white);
 }
 
-.footer__copyright {
-  margin-left: auto;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Open Sans", sans-serif;
-}
-
 /* Mobile responsive */
 @media (max-width: 900px) {
-  .footer__row-1 {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .footer__row-2 {
-    flex-wrap: wrap;
-  }
-  
+  .footer__row-1,
+  .footer__row-2,
   .footer__row-3 {
     flex-wrap: wrap;
   }
   
-  .footer__copyright {
-    margin-left: 0;
+  .footer__brand {
     width: 100%;
-    margin-top: 8px;
+    margin-bottom: 12px;
   }
 }
 
