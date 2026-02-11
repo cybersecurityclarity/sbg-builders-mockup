@@ -614,7 +614,7 @@ img {
   background: #111;
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   opacity: 0.85;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
@@ -1272,7 +1272,7 @@ img {
   height: 200px;
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   opacity: 0.8;
   transition: all 0.3s ease;
 }
@@ -1383,7 +1383,7 @@ img {
   height: 240px;
   object-fit: cover;
   border-radius: var(--radius);
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   opacity: 0.85;
   transition: all 0.3s ease;
 }
@@ -1978,7 +1978,7 @@ body {
   height: 300px;
   object-fit: cover;
   border-radius: var(--radius);
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
