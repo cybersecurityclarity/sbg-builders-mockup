@@ -14,16 +14,60 @@
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Navigation -->
- <div id="nav-placeholder"></div>
+<div id="nav-placeholder"></div>
 
 <script>
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-            
-            // Nav functionality here (scroll effect, mobile menu, dropdown)
-        });
+fetch('nav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('nav-placeholder').innerHTML = data;
+    
+    // AUTO-HIGHLIGHT CURRENT PAGE
+    let currentPage = window.location.pathname.split('/').pop();
+    
+    // Handle root/index cases
+    if (!currentPage || currentPage === '' || currentPage === '/') {
+      currentPage = 'index.html';
+    }
+    
+    // Find and highlight matching link
+    const navLinks = document.querySelectorAll('.nav__menu a:not(.nav__dropdown-toggle)');
+    
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      
+      if (href && (href === `./${currentPage}` || href === currentPage)) {
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+    
+    // Nav scroll effect
+    const nav = document.querySelector('.nav');
+    const navToggle = document.querySelector('.nav__toggle');
+    const navMenu = document.querySelector('.nav__menu');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav--solid');
+      } else {
+        nav.classList.remove('nav--solid');
+      }
+    });
+
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = dropdownToggle.closest('.nav__menu-dropdown');
+        parent.classList.toggle('is-open');
+      });
+    }
+  });
 </script>
 
   <main id="main" role="main">
