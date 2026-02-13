@@ -31,22 +31,154 @@
 </script>
 
   <main id="main" role="main">
-    <!-- Page Hero -->
-   <section class="services-hero">
-      <div class="container">
-        <div class="services-hero__content">
-          <div class="services-hero__text">
-            <h1 class="services-hero__title">Construction Services for Owners, Tenants &amp; Project Partners</h1>
-            <p class="services-hero__subtitle">
-              Choosing the right general contractor defines the entire project experience. At SBG Builders, we deliver a streamlined, modern approach to construction—powered by smart systems, balanced partnerships, and a dedication to long-term growth.
-            </p>
-          </div>
-          <div class="services-hero__image">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=90" alt="Construction services" loading="eager">
-          </div>
+<!-- Services Page Hero - Right Image Slideshow (NOT Background) -->
+<section class="services-hero">
+  <!-- Static Background -->
+  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=90'); filter: grayscale(100%); opacity: 0.5;"></div>
+  
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="services-hero__content">
+      <div class="services-hero__text">
+        <h1 class="services-hero__title">Construction Services for Owners, Tenants & Project Partners</h1>
+        <p class="services-hero__subtitle">
+          Choosing the right general contractor defines the entire project experience. At SBG Builders, we deliver a streamlined, modern approach to construction—powered by smart systems, balanced partnerships, and a dedication to long-term growth.
+        </p>
+      </div>
+      
+      <!-- Auto-Changing Image Slideshow (RIGHT SIDE) -->
+      <div class="services-hero__image-container">
+        <div class="services-hero__slideshow">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=90" alt="Construction site" class="services-slide active">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=90" alt="Commercial construction" class="services-slide">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=90" alt="Steel building frame" class="services-slide">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112c4e5190?w=800&q=90" alt="Construction aerial view" class="services-slide">
+          <img src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=800&q=90" alt="Interior construction" class="services-slide">
+          <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=90" alt="Building construction" class="services-slide">
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<!-- CSS for Services Hero with Right Image Slideshow (ADD TO STYLES.CSS) -->
+<style>
+.services-hero {
+  padding: 140px 0 100px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, var(--bg2), var(--bg));
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.services-hero__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.services-hero__text {
+  text-align: left;
+}
+
+/* Right Image Slideshow Container */
+.services-hero__image-container {
+  width: 100%;
+  height: 400px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.services-hero__slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Individual Slide Images */
+.services-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.services-slide.active {
+  opacity: 1;
+}
+
+.services-hero__title {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--white);
+}
+
+.services-hero__subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .services-hero__content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .services-hero__title {
+    font-size: 32px;
+  }
+  
+  .services-hero__image-container {
+    height: 300px;
+  }
+}
+</style>
+
+<!-- JavaScript for Right Image Slideshow (ADD TO SERVICES.HTML) -->
+<script>
+(function() {
+  const slides = document.querySelectorAll('.services-slide');
+  let currentSlide = 0;
+  
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+  
+  // Change image every 4 seconds
+  setInterval(nextSlide, 4000);
+})();
+</script>
 
     <!-- Services Grid -->
     <section class="section" style="position: relative; overflow: hidden;">
