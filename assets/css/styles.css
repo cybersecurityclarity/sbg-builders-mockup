@@ -2618,3 +2618,46 @@ body {
   color: var(--accent);
   font-weight: 600;
 }
+
+/* CTA Section - Mountain Background (ADD TO CSS) */
+.section--cta {
+  background: radial-gradient(80% 120% at 30% 0%, rgba(255, 255, 255, 0.1), transparent 60%),
+    linear-gradient(180deg, var(--bg2), var(--bg));
+  position: relative;
+  overflow: hidden;
+}
+
+.section--cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.section--cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smaller Buttons (UPDATE EXISTING .btn CLASS) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 10px 16px;  /* Reduced from 12px 18px */
+  font-weight: 600;
+  border: 1px solid var(--stroke);
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  cursor: pointer;
+  font-size: 14px;  /* Reduced from 15px */
+}
