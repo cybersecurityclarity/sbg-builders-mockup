@@ -1,7 +1,12 @@
-<!-- Updated Footer HTML (footer.html) -->
+<!-- Updated Footer with Logo on Left (footer.html) -->
 <footer class="footer" role="contentinfo">
-  <div class="footer__two-row-layout">
-    <!-- Left Side: Company Info (2 Rows) -->
+  <div class="footer__main-layout">
+    <!-- Logo (Left Side) -->
+    <div class="footer__logo-container">
+      <img src="./assets/img/Primary - Black.png" alt="SBG Builders" class="footer__logo" style="filter: invert(1);" loading="lazy">
+    </div>
+    
+    <!-- Company Info (Center - 2 Rows) -->
     <div class="footer__company-info">
       <!-- Row 1: Address, Phone, Email -->
       <div class="footer__row">
@@ -22,7 +27,7 @@
       </div>
     </div>
     
-    <!-- Right Side: Links -->
+    <!-- Links (Right Side) -->
     <div class="footer__links">
       <a href="./privacy.html">Privacy Policy</a>
       <a href="./accessibility.html">Accessibility Statement</a>
@@ -42,7 +47,7 @@
   </div>
 </footer>
 
-<!-- CSS for Updated Footer (ADD TO STYLES.CSS) -->
+<!-- CSS for Footer with Logo (ADD TO STYLES.CSS) -->
 <style>
 .footer {
   background: var(--bg2);
@@ -50,23 +55,32 @@
   border-top: 1px solid var(--stroke);
 }
 
-.footer__two-row-layout {
+.footer__main-layout {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
   gap: 40px;
   margin-bottom: 20px;
 }
 
-/* Left Side: Company Info (2 Rows) */
+/* Logo (Left) */
+.footer__logo-container {
+  flex-shrink: 0;
+}
+
+.footer__logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Company Info (Center - 2 Rows) */
 .footer__company-info {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .footer__row {
@@ -94,7 +108,7 @@
   margin: 0 4px;
 }
 
-/* Right Side: Links */
+/* Links (Right) */
 .footer__links {
   display: flex;
   align-items: center;
@@ -140,24 +154,32 @@
 
 /* Mobile Responsive */
 @media (max-width: 968px) {
-  .footer__two-row-layout {
-    flex-direction: column;
+  .footer__main-layout {
+    grid-template-columns: 1fr;
     gap: 24px;
   }
   
-  .footer__links {
-    justify-content: flex-start;
+  .footer__logo-container {
+    justify-self: center;
+  }
+  
+  .footer__company-info {
+    text-align: center;
   }
   
   .footer__row {
-    font-size: 13px;
+    justify-content: center;
+  }
+  
+  .footer__links {
+    justify-content: center;
   }
 }
 
 @media (max-width: 640px) {
   .footer__row {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 6px;
   }
   
@@ -167,7 +189,6 @@
   
   .footer__links {
     flex-direction: column;
-    align-items: flex-start;
     gap: 12px;
   }
 }
