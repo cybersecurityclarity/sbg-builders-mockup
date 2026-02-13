@@ -69,40 +69,101 @@
   </div>
 </section>
 
-    <!-- What Makes Us Different (from About page) -->
-    <section class="section" style="position: relative; overflow: hidden;">
-      <div style="background-image: url(&#39;https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&amp;q=90&#39;); filter: grayscale(100%); opacity: 0.15; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: center; z-index: 0;"></div>
-      <div class="container" style="position: relative; z-index: 1;">
-        <div class="section__head">
-          <h2>Our Approach</h2>
-        </div>
-        <div class="sbg-pillars reveal">
-          <div class="sbg-pillar glass">
-            <div class="sbg-pillar__icon">S</div>
-            <h3 class="sbg-pillar__title">Systems</h3>
-            <p class="sbg-pillar__text">
-              We build with intention. SBG uses advanced technology, streamlined workflows, and standardized processes to create clarity, reduce risk, and drive efficiency from preconstruction through closeout. Our systems save clients time, protect budgets, and ensure every project moves with precision and transparency.
-            </p>
-          </div>
+<!-- Home Page - Our Approach Section (LEFT-ALIGNED, CHECKMARKS, SPACING) -->
+<section class="section" style="position: relative; overflow: hidden;">
+  <div style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=90'); filter: grayscale(100%); opacity: 0.15; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: center; z-index: 0;"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section__head" style="margin-bottom: 50px;">
+      <h2>Our Approach</h2>
+      <p class="muted">
+        Systems-driven delivery, balanced partnerships, and a commitment to growth define how we build.
+      </p>
+    </div>
 
-          <div class="sbg-pillar glass">
-            <div class="sbg-pillar__icon">B</div>
-            <h3 class="sbg-pillar__title">Balance</h3>
-            <p class="sbg-pillar__text">
-              Partnership is our baseline. We maintain balance by fostering clear communication, aligned expectations, and a collaborative relationship with clients, architects, and project partners. Every decision is guided by transparency, accountability, and a commitment to making the construction experience feel straightforward and supported.
-            </p>
-          </div>
-
-          <div class="sbg-pillar glass">
-            <div class="sbg-pillar__icon">G</div>
-            <h3 class="sbg-pillar__title">Growth</h3>
-            <p class="sbg-pillar__text">
-              We invest in progress—for our team, our partners, and our future. SBG grows exceptional talent, builds lasting relationships, and fosters an environment that fuels development, curiosity, and forward-thinking solutions. This commitment creates stronger projects, smarter solutions, and meaningful long-term impact.
-            </p>
-          </div>
+    <div class="grid3 reveal">
+      <article class="tile glass">
+        <!-- Icon -->
+        <div style="margin-bottom: 20px;">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--text);">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
         </div>
-      </div>
-    </section>
+        <h3 style="text-align: left;">Pre-Construction</h3>
+        <ul class="list" style="text-align: left;">
+          <li>Streamlined systems bring clarity before construction begins</li>
+          <li>Advanced technology for risk reduction</li>
+          <li>Standardized processes ensure precision</li>
+          <li>Transparent planning protects budgets</li>
+        </ul>
+      </article>
+
+      <article class="tile glass">
+        <!-- Icon -->
+        <div style="margin-bottom: 20px;">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--text);">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <h3 style="text-align: left;">During Construction</h3>
+        <ul class="list" style="text-align: left;">
+          <li>Balanced partnerships with disciplined management</li>
+          <li>Clear communication from day one</li>
+          <li>Aligned expectations across all stakeholders</li>
+          <li>Collaborative approach ensures project success</li>
+        </ul>
+      </article>
+
+      <article class="tile glass">
+        <!-- Icon -->
+        <div style="margin-bottom: 20px;">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--text);">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3 style="text-align: left;">Closeout & Beyond</h3>
+        <ul class="list" style="text-align: left;">
+          <li>Growth through long-term trust and transparency</li>
+          <li>Exceptional talent development and support</li>
+          <li>Forward-thinking solutions for lasting impact</li>
+          <li>Commitment to continuous improvement</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CSS to ensure checkmarks appear (ADD TO STYLES.CSS IF NOT PRESENT) -->
+<style>
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+}
+
+.list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 16px;
+}
+</style>
 
    <!-- Home Page - Auto-Scrolling Image Gallery (10 IMAGES) -->
 <section class="section">
