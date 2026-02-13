@@ -2824,3 +2824,90 @@ body {
   margin: 0;
   text-align: left;
 }
+
+/* Cookie Popup - Fix Decline Button Text Color (ADD TO CSS) */
+
+/* Cookie Banner Styling */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 9999;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cookie-banner p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  flex: 1;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-banner button {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Accept Button */
+.cookie-banner button.accept {
+  background: var(--white);
+  color: var(--bg);
+  border-color: var(--white);
+}
+
+.cookie-banner button.accept:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Decline Button - FIXED TO WHITE TEXT */
+.cookie-banner button.decline {
+  background: transparent;
+  color: var(--white) !important;  /* FORCE WHITE TEXT */
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cookie-banner button.decline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .cookie-banner-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .cookie-banner button {
+    flex: 1;
+  }
+}
