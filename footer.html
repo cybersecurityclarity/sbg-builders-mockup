@@ -1,31 +1,174 @@
-<!-- Footer -->
+<!-- Updated Footer HTML (footer.html) -->
 <footer class="footer" role="contentinfo">
-  <div class="footer__single-row">
-    <img src="./assets/img/Primary - Black.png" alt="SBG Builders" class="footer__logo" style="filter: invert(1);" loading="lazy" />
-    <div class="footer__main-content">
-      <span>27702 Crown Valley Pkwy D4 Ladera Ranch, CA 92694</span>
-      <span>•</span>
-      <a href="tel:+19492888708">949-288-8708</a>
-      <span>•</span>
-      <a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a>
-      <span>•</span>
-      <a href="./projects.html">CA license number: 1149753</a>
-      <span>•</span>
-      <a href="./about.html">OR license number: 01908799-8</a>
-      <span>•</span>
-      <a href="./contact.html">WA license number: SBGBUBL754QD</a>
+  <div class="footer__two-row-layout">
+    <!-- Left Side: Company Info (2 Rows) -->
+    <div class="footer__company-info">
+      <!-- Row 1: Address, Phone, Email -->
+      <div class="footer__row">
+        <span>7702 Crown Valley Pkwy D4 Ladera Ranch, CA 92694</span>
+        <span class="footer__separator">•</span>
+        <a href="tel:+19492888708">949-288-8708</a>
+        <span class="footer__separator">•</span>
+        <a href="mailto:info@sbg-builders.com">info@sbg-builders.com</a>
+      </div>
+      
+      <!-- Row 2: License Numbers -->
+      <div class="footer__row">
+        <span>CA license number: 1149753</span>
+        <span class="footer__separator">•</span>
+        <span>OR license number: 01908799-8</span>
+        <span class="footer__separator">•</span>
+        <span>WA license number: SBGBUBL754QD</span>
+      </div>
     </div>
-    <div class="footer__legal-stack">
+    
+    <!-- Right Side: Links -->
+    <div class="footer__links">
       <a href="./privacy.html">Privacy Policy</a>
       <a href="./accessibility.html">Accessibility Statement</a>
-      <a href="https://www.linkedin.com/company/sbg-builders/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer__linkedin-icon">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+      <a href="https://www.linkedin.com/company/sbg-builders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
         </svg>
       </a>
     </div>
   </div>
-  <div class="footer__copyright-center">
-    © <span class="footer-year"></span> SBG BUILDERS. All rights reserved.
+  
+  <!-- Copyright Row -->
+  <div class="footer__copyright">
+    <p>© <span class="footer-year">2026</span> SBG BUILDERS. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- CSS for Updated Footer (ADD TO STYLES.CSS) -->
+<style>
+.footer {
+  background: var(--bg2);
+  padding: 40px 0 20px;
+  border-top: 1px solid var(--stroke);
+}
+
+.footer__two-row-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+/* Left Side: Company Info (2 Rows) */
+.footer__company-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.footer__row a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__row a:hover {
+  color: var(--white);
+}
+
+.footer__separator {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 4px;
+}
+
+/* Right Side: Links */
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.footer__links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer__links a:hover {
+  color: var(--white);
+}
+
+.footer__links svg {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover svg {
+  color: var(--white);
+}
+
+/* Copyright */
+.footer__copyright {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 24px 0;
+  border-top: 1px solid var(--stroke);
+  text-align: center;
+}
+
+.footer__copyright p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .footer__two-row-layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .footer__links {
+    justify-content: flex-start;
+  }
+  
+  .footer__row {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .footer__separator {
+    display: none;
+  }
+  
+  .footer__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+</style>
