@@ -18,36 +18,17 @@
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Fixed Navigation -->
-  <nav class="nav" role="banner">
-    <div class="container">
-      <div class="nav__inner">
-        <a class="nav__brand" href="./index.html" aria-label="SBG Builders home">
-          <img class="nav__brand-logo" src="./assets/img/Primary - Black.png" alt="SBG Builders" width="180" height="60" loading="eager" decoding="async" />
-        </a>
+ <div id="nav-placeholder"></div>
 
-        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <ul id="nav-menu" class="nav__menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li class="nav__menu-dropdown">
-            <a href="#" class="nav__dropdown-toggle">Work With Us</a>
-            <ul class="nav__dropdown">
-              <li><a href="./contact.html">Careers</a></li>
-              <li><a href="./subcontractor-prequalification.html">Subcontractor Prequalification</a></li>
-            </ul>
-          </li>
-          <li><a href="./contact.html" class="nav__cta" aria-current="page">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+            
+            // Nav functionality here (scroll effect, mobile menu, dropdown)
+        });
+</script>
 
   <main id="main" role="main">
     <!-- Contact Form & Info -->
