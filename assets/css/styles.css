@@ -2402,7 +2402,7 @@ body {
 
 .footer__logo {
   width: auto;
-  height: 70px;
+  height: 80px;  /* BIGGER - same as nav */
   flex-shrink: 0;
 }
 
