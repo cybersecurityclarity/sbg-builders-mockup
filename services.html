@@ -766,15 +766,15 @@ fetch('nav.html')
       yearEl.textContent = String(new Date().getFullYear());
     }
 
-    // Dropdown menu
-    const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
-    if (dropdownToggle) {
-      dropdownToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        const parent = dropdownToggle.closest('.nav__menu-dropdown');
-        parent.classList.toggle('is-open');
-      });
-    }
+   // Dropdown menu
+const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+if (dropdownToggle) {
+  dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const parent = dropdownToggle.closest('.nav__menu-dropdown');
+    parent.classList.toggle('is-open');
+  });
+}
   </script>
 </body>
 </html>
