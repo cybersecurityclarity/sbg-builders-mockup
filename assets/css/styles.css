@@ -3049,3 +3049,103 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+/* ========================================
+   MOBILE FIXES - Add to END of styles.css
+   ======================================== */
+
+@media (max-width: 768px) {
+  
+  /* FIX 1: Homepage "SYSTEMS. BALANCE. GROWTH." - Make it smaller and wrap */
+  .hero__headline-large {
+    font-size: 42px !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.02em !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+  }
+  
+  /* FIX 2: Remove circle/border around Contact in mobile menu */
+  .nav__cta {
+    padding: 10px 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background: transparent !important;
+  }
+  
+  .nav__cta:hover {
+    border: none !important;
+    background: transparent !important;
+  }
+  
+  /* About Page - Team section */
+  .hero--page h1 {
+    font-size: 28px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.2 !important;
+  }
+  
+  .hero--page .container > div > div {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Projects Page - Title */
+  .section__head h2 {
+    font-size: 22px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Services Page - Title */
+  .services-hero__title {
+    font-size: 24px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* S.B.G. Pillars Stack Vertically */
+  .sbg-pillars {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Hamburger menu visibility and functionality */
+  .nav__toggle {
+    display: flex !important;
+    z-index: 999 !important;
+    position: relative !important;
+  }
+  
+  .nav__menu {
+    display: none;
+  }
+  
+  .nav__menu.is-open {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  /* Buttons stack on mobile */
+  .hero__actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .hero__actions .btn {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+  
+  /* Cards stack on mobile */
+  .cards {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Grid3 sections stack */
+  .grid3 {
+    grid-template-columns: 1fr !important;
+  }
+}
