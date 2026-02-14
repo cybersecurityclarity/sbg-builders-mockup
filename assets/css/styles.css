@@ -3081,7 +3081,7 @@ body {
   
   /* FIX 1: Homepage "SYSTEMS. BALANCE. GROWTH." - Make it smaller and wrap */
   .hero__headline-large {
-    font-size: 42px !important;
+    font-size: 50px !important;
     line-height: 1.1 !important;
     letter-spacing: 0.02em !important;
     word-wrap: break-word !important;
