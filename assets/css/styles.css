@@ -3050,10 +3050,34 @@ body {
   }
 }
 /* ========================================
-   MOBILE FIXES - Add to END of styles.css
+   FIX FOR EXCESS SCROLLING - Add to styles.css
    ======================================== */
 
 @media (max-width: 768px) {
+  
+  /* REMOVE min-height on mobile to prevent excess scrolling */
+  .hero,
+  .hero--page,
+  .section,
+  .services-hero {
+    min-height: auto !important;
+  }
+  
+  /* Adjust padding to be reasonable on mobile */
+  .hero {
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .hero--page {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .services-hero {
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+  }
   
   /* FIX 1: Homepage "SYSTEMS. BALANCE. GROWTH." - Make it smaller and wrap */
   .hero__headline-large {
