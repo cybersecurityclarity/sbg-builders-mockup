@@ -198,7 +198,7 @@
     const yearEl = document.getElementById('year');
     if (yearEl && !yearEl.textContent) yearEl.textContent = String(new Date().getFullYear());
 
-  // Dropdown menu
+ // Dropdown menu
 const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
 if (dropdownToggle) {
   dropdownToggle.addEventListener('click', (e) => {
@@ -207,6 +207,24 @@ if (dropdownToggle) {
     parent.classList.toggle('is-open');
   });
 }
-  </script>
+
+// FIX: Hamburger menu
+setTimeout(() => {
+  const navToggle = document.querySelector('.nav__toggle');
+  const navMenu = document.querySelector('.nav__menu');
+  
+  if (navToggle && navMenu) {
+    navToggle.replaceWith(navToggle.cloneNode(true));
+    const newToggle = document.querySelector('.nav__toggle');
+    
+    newToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = navMenu.classList.toggle('is-open');
+      newToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
+}, 500);
+</script>
 </body>
 </html>
