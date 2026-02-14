@@ -23,3 +23,22 @@
       </div>
     </div>
   </nav>
+<script>
+
+ (function() {
+  // Wait for nav to be fully rendered
+  setTimeout(() => {
+    const navToggle = document.querySelector('.nav__toggle');
+    const navMenu = document.querySelector('.nav__menu');
+    
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = navMenu.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  }, 100);
+})();
+</script>
